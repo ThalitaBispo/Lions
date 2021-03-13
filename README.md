@@ -1,7 +1,5 @@
 Executar o Projeto
 
-Executar o Projeto
-
 1- Faça o download do projeto
 
 2- Abra no editor de sua preferência
