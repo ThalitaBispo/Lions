@@ -40,4 +40,8 @@ Route::middleware(['web'])->group(function () {
     //ROTAS RELATORIOS
     Route::get('/user/relation', 'PDFController@user')->name('user/relation');
     Route::get('/client/relation', 'PDFController@client')->name('client/relation');
+
+    //ROTAS CLIENTE
+    Route::get('/cliente', 'ClienteController@show')->name('cliente');
+    Route::post('/cliente/create', 'ClienteController@create')->name('cliente/create');
 });

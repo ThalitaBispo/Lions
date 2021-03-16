@@ -17,10 +17,8 @@ class CreatePagamentosTable extends Migration
             $table->id();
             $table->date('date');
             $table->decimal('value', 2);
-            $table->unsignedBigInteger('empresas_id');
-            $table->foreign('empresas_id')->references('id')->on('empresas');
-            $table->unsignedBigInteger('pessoa_f_s');
-            $table->foreign('pessoa_f_s')->references('id')->on('pessoa_f_s');
+            $table->unsignedBigInteger('clientes_id');
+            $table->foreign('clientes_id')->references('id')->on('clientes');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grupo Lions</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Grupo Lions</title>
 
-         <!-- estilos -->
+		<!-- estilos -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<!-- script -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -19,13 +18,24 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    </head>
-    <body>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/cep.js"></script>
+		<script type="text/javascript" src="js/function.js"></script>
+		<script type="text/javascript" src="js/function-delet.js"></script>
 
-         <!-- menu -->
-         <div class="nav-side-menu">
-		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/_grupo lions.png') }}" width="200px"> </div>
-		        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+		<!-- Select -->
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- menu -->
+		<div class="nav-side-menu" id="pagina">
+		    <div class="brand mt-4 mb-4"> <img src="img/_grupo lions.png" width="200px"> </div>
+		    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 		        <div class="menu-list">
 
@@ -92,60 +102,6 @@
 		     </div>
 		</div>
 
-    <div class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="container border mt-5">
-                        <div class="row">
-                            <div class="col">
+	</body>
 
-                                <h4 class="mt-5">Add Usuário</h4>
-                                <hr>
-
-                                <form class="mt-4 mb-5" id="form_user" method="post" action="{{route ('user/create')}}">
-
-                                    {{ csrf_field() }}
-
-
-                                    <div class="form-group">
-                                        <label>Nome</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Nome">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Lions@lions.com">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Senha</label>
-                                        <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" placeholder="***********">
-                                        <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
-                                        right: 60px;cursor: pointer;">remove_red_eye</span>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label>Confirmar Senha</label>
-                                        <input type="password" id="confirmPassowrd" name="confirmPassowrd" class="form-control" minlength="6" maxlength="8" placeholder="***********">
-                                        <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
-                                            right: 60px;cursor: pointer;">remove_red_eye</span>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-dark mt-4">Salvar</button>
-
-
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    </body>
 </html>
