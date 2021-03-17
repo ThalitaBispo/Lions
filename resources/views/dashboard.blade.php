@@ -147,15 +147,17 @@
 
 					<tbody>
 
+                    @foreach($clientes as $cliente)
+
 						<tr>
 							<td></td>
-							<td> razao </td>
-							<td> bairro </td>
-							<td> tel </td>
+							<td> {{$cliente->name}} </td>
+							<td> {{$cliente->district}} </td>
+							<td> {{$cliente->tel}} </td>
 
 							<td class="iconsColumn">
 
-							    <a style="cursor:pointer">
+							    <a href="{{ route('dashboard/update/cliente', ['id' => $cliente->id]) }}" style="cursor:pointer;color:black;text-decoration:none">
 									<i class="material-icons sidebar-icon" title="Editar">edit</i>
 								</a>
 
@@ -171,11 +173,11 @@
 									<i class="material-icons sidebar-icon" title="Deletar">delete</i>
 								</a>
 
-
 							</td>
 
                             <td></td>
 						</tr>
+                    @endforeach
 
 
 					</tbody>
@@ -183,31 +185,6 @@
 				</table>
 
 			</div>
-
-			<div style=display:none;position:fixed;z-index:1;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4);>
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-
-                        <div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Deletar Usuário</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-								    <span aria-hidden="true">&times;</span>
-								</button>
-						</div>
-
-                        <div class="modal-body">
-							Tem certeza que deseja deletar este usuário? Os dados serãp excluídos permanentemente
-						</div>
-
-                        <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-					<p id="mostrar"></p>
 
 		    </div>
 		</div>

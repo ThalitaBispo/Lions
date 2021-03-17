@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Cliente;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -10,8 +11,9 @@ class AuthController extends Controller
     public function dashboard(){
 
         if(Auth::check() === true) {
-            $registros = User::all();
-            return view('dashboard',compact('registros'));
+            // $registros = User::all();
+            $clientes = Cliente::all();
+            return view('dashboard',compact('clientes'));
         }
 
         return redirect()->route('home');

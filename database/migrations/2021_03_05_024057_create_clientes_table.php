@@ -16,7 +16,7 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('cpf/cnpj');
+            $table->string('cpf_cnpj');
             $table->string('sector')->nullable();
             $table->boolean('type');
             $table->string('tel');

@@ -26,9 +26,10 @@ Route::middleware(['web'])->group(function () {
     Route::get('/dashboard', 'AuthController@dashboard')->name('dashboard');
 
     //ROTAS ADMIN
-
     Route::get('/dashboard/create/user', 'AdminController@createUser')->name('dashboard/create/user');
     Route::get('/dashboard/update/user/{id}', 'AdminController@updateUser')->name('dashboard/update/user');
+
+    Route::get('/dashboard/update/cliente/{id}', 'AdminClienteController@updateCliente')->name('dashboard/update/cliente');
 
     //ROTAS USER
     Route::get('/user', 'UserController@index')->name('user');
@@ -42,6 +43,8 @@ Route::middleware(['web'])->group(function () {
     Route::get('/client/relation', 'PDFController@client')->name('client/relation');
 
     //ROTAS CLIENTE
-    Route::get('/cliente', 'ClienteController@show')->name('cliente');
+    Route::get('/cliente', 'AdminClienteController@createCliente')->name('cliente');
     Route::post('/cliente/create', 'ClienteController@create')->name('cliente/create');
+    Route::post('/cliente/update/{id}', ['as' => 'cliente/update', 'uses' => 'ClienteController@update']);
+    //Route::get('/cliente/update/{id}', 'ClienteController@update')->name('cliente/update');
 });
