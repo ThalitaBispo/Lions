@@ -45,6 +45,6 @@ Route::middleware(['web'])->group(function () {
     //ROTAS CLIENTE
     Route::get('/cliente', 'AdminClienteController@createCliente')->name('cliente');
     Route::post('/cliente/create', 'ClienteController@create')->name('cliente/create');
-    Route::post('/cliente/update/{id}', ['as' => 'cliente/update', 'uses' => 'ClienteController@update']);
-    //Route::get('/cliente/update/{id}', 'ClienteController@update')->name('cliente/update');
+    Route::get('/cliente/delete/{id}', ['as' => 'cliente/delete', 'uses' => 'ClienteController@destroy']);
+
 });

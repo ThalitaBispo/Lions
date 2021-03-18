@@ -150,18 +150,18 @@
 
                         <div class="form-group row">
                         <div class="col">
-                            <label>N°</label>
-                            <input type="number" name="number" class="form-control" placeholder="00000" required>
+                        <label>N°</label>
+                        <input type="number" name="number" class="form-control" placeholder="00000" required>
                         </div>
 
                         <div class="col">
-                            <label>Qd.</label>
-                            <input type="number" name="court" class="form-control" placeholder="00000" required>
+                        <label>Qd.</label>
+                        <input type="number" name="court" class="form-control" placeholder="00000" required>
                         </div>
 
                         <div class="col">
-                            <label>Lt.</label>
-                            <input type="number" name="lot" class="form-control" placeholder="00000"required >
+                        <label>Lt.</label>
+                        <input type="number" name="lot" class="form-control" placeholder="00000"required >
                         </div>
                         </div>
 
@@ -182,13 +182,13 @@
 
                         <div class="form-group row">
                         <div class="col">
-                            <label>Dia para pagamento</label>
-                            <input type="text" name="date" class="form-control" maxlength="2" placeholder="00">
+                        <label>Data para pagamento</label>
+                        <input type="text" name="date" class="form-control" placeholder="00/00/0000" required>
                         </div>
 
                         <div class="col">
-                            <label>Valor</label>
-                            <input type="text" name="value" class="form-control" placeholder="R$ 0,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">
+                        <label>Valor</label>
+                        <input type="text" name="value" class="form-control" placeholder="R$ 0,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});" required>
                         </div>
                         </div>
 

@@ -169,7 +169,7 @@
 									<i class="material-icons sidebar-icon" title="Proposta de Serviço">descriptioni</i>
 								</a>
 
-								<a style="cursor:pointer">
+								<a href="{{ route('cliente/delete', ['id' => $cliente->id]) }}" style="cursor:pointer;color:black;text-decoration:none" onClick="return confirm('Deseja mesmo apagar o cliente selecionado?')">
 									<i class="material-icons sidebar-icon" title="Deletar">delete</i>
 								</a>
 

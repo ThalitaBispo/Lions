@@ -180,12 +180,12 @@
                   <div class="form-group row">
                     <div class="col">
                       <label>Dia para pagamento</label>
-                      <input type="text" name="diapagamento" class="form-control" value="" maxlength="2" placeholder="00">
+                      <input type="text" name="date" class="form-control" value="{{$clientes->date}}" placeholder="00/00/0000">
                     </div>
 
                     <div class="col">
                       <label>Valor</label>
-                      <input type="text" name="valor" class="form-control" value="" placeholder="R$ 0,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">
+                      <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">
                     </div>
                   </div>
 

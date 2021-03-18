@@ -27,11 +27,13 @@ class ClienteController extends Controller
             $cont = $dados['cpf/cnpj'];
 
             //0 == empresa e 1 == pessoa
-            if(strlen($cont) == 11){
+            if(strlen($cont) === 11){
                 $dados['type'] = 1;
             } else {
                 $dados['type'] = 0;
             }
+
+            $dados['date'] = \Carbon\Carbon::parse($dados['date'])->format('Y/m/d');
 
             $dados['users_id'] = Auth::user()->id;
 
@@ -66,6 +68,8 @@ class ClienteController extends Controller
                 $dados['type'] = 0;
             }
 
+        $dados['date'] = \Carbon\Carbon::parse($dados['date'])->format('Y/m/d');
+
         $cliente->update($dados);
 
         if ($cliente) {
@@ -77,9 +81,15 @@ class ClienteController extends Controller
         return redirect()->back()->with('error', 'Erro ao alterar Cliente');
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        $cliente->delete();
+
+        if ($cliente) {
+            return redirect()->route('dashboard')->with('success', 'Excluido com sucesso!');
+        }
+        return redirect()->back()->with('error', 'Erro ao excluir usuário');
     }
 
 }

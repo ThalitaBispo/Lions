@@ -13,6 +13,6 @@ class Cliente extends Model
 
     protected $fillable = [
         'name', 'cpf_cnpj', 'sector', 'type', 'tel', 'cep', 'street', 'district', 'city', 'state',
-        'number', 'court', 'lot', 'seller', 'users_id',
+        'number', 'court', 'lot', 'date', 'value', 'seller', 'users_id',
     ];
 }

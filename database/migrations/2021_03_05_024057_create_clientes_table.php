@@ -28,6 +28,8 @@ class CreateClientesTable extends Migration
             $table->integer('number');
             $table->integer('court');
             $table->integer('lot');
+            $table->date('date');
+            $table->decimal('value', 6, 2);
             $table->string('seller');
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
