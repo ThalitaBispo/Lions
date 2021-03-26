@@ -40,11 +40,16 @@ Route::middleware(['web'])->group(function () {
 
     //ROTAS RELATORIOS
     Route::get('/user/relation', 'PDFController@user')->name('user/relation');
-    Route::get('/client/relation', 'PDFController@client')->name('client/relation');
+    Route::get('/cliente/relation/{id}', 'PDFController@client')->name('client/relation');
+    Route::get('/cliente/proposta/{id}', 'PDFController@proposta')->name('cliente/proposta');
 
     //ROTAS CLIENTE
     Route::get('/cliente', 'AdminClienteController@createCliente')->name('cliente');
     Route::post('/cliente/create', 'ClienteController@create')->name('cliente/create');
+    Route::post('/cliente/update/{id}', ['as' => 'cliente/update', 'uses' => 'ClienteController@update']);
     Route::get('/cliente/delete/{id}', ['as' => 'cliente/delete', 'uses' => 'ClienteController@destroy']);
+
+    //ROTA EMAIL
+    Route::get('/send-email', 'MainController@sendEmail');
 
 });

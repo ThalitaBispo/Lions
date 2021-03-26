@@ -113,17 +113,17 @@
 
                   <div class="form-group">
                     <label>Nome/Razão Social</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nome/Razão Social" value="{{$clientes->name}}">
+                    <input type="text" name="name" class="form-control" placeholder="Nome/Razão Social" value="{{$clientes->name}}" required>
                   </div>
 
                   <div class="form-group">
                     <label>CPF/CNPJ</label>
-                    <input type="text" name="cpf/cnpj" class="form-control" value="{{$clientes->cpf_cnpj}}" minlength="14" maxlength="14" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')">
+                    <input type="text" name="cpf/cnpj" class="form-control" value="{{$clientes->cpf_cnpj}}" minlength="14" maxlength="14" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
                   </div>
 
                   <div class="form-group">
                     <label>Telefone</label>
-                    <input type="text" name="tel" class="form-control" value="{{$clientes->tel}}" minlength="11" maxlength="12" placeholder="(00) 00000-0000" onkeypress="$(this).mask('(00) 00000-0000')">
+                    <input type="text" name="tel" class="form-control" value="{{$clientes->tel}}" minlength="11" maxlength="12" placeholder="(00) 00000-0000" onkeypress="$(this).mask('(00) 00000-0000')" required>
                   </div>
 
                   <div class="form-group">
@@ -133,7 +133,7 @@
 
                   <div class="form-group">
                     <label>CEP</label>
-                    <input type="text" name="cep" class="form-control" value="{{$clientes->cep}}" id="cep" placeholder="00.000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="$(this).mask('00.000-000')">
+                    <input type="text" name="cep" class="form-control" value="{{$clientes->cep}}" id="cep" placeholder="00.000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="$(this).mask('00.000-000')" required>
                     <br>
                     <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
                   </div>
@@ -142,56 +142,56 @@
 
                   <div class="form-group mt-2">
                     <label>Logradouro</label>
-                    <input type="text" name="street" class="form-control" value="{{$clientes->street}}" id="rua" placeholder="Logradouro">
+                    <input type="text" name="street" class="form-control" value="{{$clientes->street}}" id="rua" placeholder="Logradouro" required>
                   </div>
 
                   <div class="form-group row">
                     <div class="col">
                       <label>N°</label>
-                      <input type="number" name="number" class="form-control" value="{{$clientes->number}}" placeholder="00000">
+                      <input type="number" name="number" class="form-control" value="{{$clientes->number}}" placeholder="00000" required>
                     </div>
 
                     <div class="col">
                       <label>Qd.</label>
-                      <input type="number" name="court" class="form-control" value="{{$clientes->court}}" placeholder="00000">
+                      <input type="number" name="court" class="form-control" value="{{$clientes->court}}" placeholder="00000" required>
                     </div>
 
                     <div class="col">
                       <label>Lt.</label>
-                      <input type="number" name="lot" class="form-control" value="{{$clientes->lot}}" placeholder="00000">
+                      <input type="number" name="lot" class="form-control" value="{{$clientes->lot}}" placeholder="00000" required>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label>Bairro</label>
-                    <input type="text" name="district" class="form-control" value="{{$clientes->district}}" id="bairro" placeholder="Bairro">
+                    <input type="text" name="district" class="form-control" value="{{$clientes->district}}" id="bairro" placeholder="Bairro" required>
                   </div>
 
                   <div class="form-group">
                     <label>Cidade</label>
-                    <input type="text" name="city" class="form-control" value="{{$clientes->city}}" id="cidade" placeholder="Cidade">
+                    <input type="text" name="city" class="form-control" value="{{$clientes->city}}" id="cidade" placeholder="Cidade" required>
                   </div>
 
                   <div class="form-group">
                     <label>Estado</label>
-                    <input type="text" name="state" class="form-control" value="{{$clientes->state}}" id="uf" placeholder="Estado">
+                    <input type="text" name="state" class="form-control" value="{{$clientes->state}}" id="uf" placeholder="Estado" required>
                   </div>
 
                   <div class="form-group row">
                     <div class="col">
                       <label>Dia para pagamento</label>
-                      <input type="text" name="date" class="form-control" value="{{$clientes->date}}" placeholder="00/00/0000">
+                      <input type="text" name="date" class="form-control" value="{{$clientes->date}}" placeholder="00/00/0000" required>
                     </div>
 
                     <div class="col">
                       <label>Valor</label>
-                      <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});">
+                      <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});" required>
                     </div>
                   </div>
 
                   <div class="form-group">
                   <label>Vendedor</label>
-                  <input type="text" name="seller" class="form-control" value="{{$clientes->seller}}" placeholder="Vendedor">
+                  <input type="text" name="seller" class="form-control" value="{{$clientes->seller}}" placeholder="Vendedor" required>
                 </div>
 
                   <button type="submit" class="btn btn-dark mt-4">Salvar</button>

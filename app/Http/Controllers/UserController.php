@@ -61,15 +61,24 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         if (Auth::check() === true) {
-            $cliente = User::findOrFail($id);
+            $user = User::findOrFail($id);
 
             $data = $request->all();
 
             //Aqui caso precise de ajuda para atualizar a senha do usuário me avise
 
-            $data['password'] = $cliente['password'];
+            //$data['password'] = $user['password'];
 
-            if ($cliente) {
+            $user->update($data);
+
+            if ( ! $data['password'] == '') // verifica se a senha foi alterada
+            {
+                $user->password = bcrypt($data['password']); // muda a senha do seu usuario já criptografada pela função bcrypt
+            }
+
+            $user->save($data);
+
+            if ($user) {
 
                 return redirect()->route('user')->with('success', 'Sucesso ao alterar usuário');
             }

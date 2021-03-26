@@ -119,7 +119,7 @@
 
                             <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="" placeholder="***********">
+                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             <br>

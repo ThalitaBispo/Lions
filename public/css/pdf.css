@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.space{
+    margin: 2rem 2rem 0 2rem;
+    margin-bottom: -200rem;
+}
+.imgLion{
+    margin: 0.75rem 0 0 1rem;
+}
+.nameComp{
+    margin: 0.25rem 0 0 8rem;
+}
+.nameRecibe{
+    margin: 0 0 0 35.5rem;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 1rem 1rem 1rem 0.75rem;
+}
+.namePM{
+    margin: 2.25rem 0 0 12rem;
+}
+.name62{
+    margin: 5rem 0 0 16rem;
+}
+.nameNumber{
+    margin: 4.5rem 0 0 18rem;
+}
+.imgWhats{
+    margin: 4.75rem 0 0 25.25rem;
+}
+.nameRUA{
+    font-size: 12px;
+    margin: 8.75rem 0 0 7rem;
+}
+.nameService{
+    font-size: 14px;
+    margin: 9rem 0 0 1rem;
+}
+.nameVencimento{
+    font-size: 14px;
+    margin: 9rem 0 0 22rem;
+}
+.nameValue{
+    margin: 8rem 0 0 32rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.25rem 0.25rem 0.25rem 2.5rem;
+    background-color: #bfbfbf;
+}
+.nameReceb{
+    font-size: 13px;
+    margin: 11.5rem 0 0 1rem;
+}
+.borda1{
+    margin: 10.75rem 0 0 0;
+    border-bottom:0.10px solid #525252;
+}
+.nameStreet{
+    font-size: 13px;
+    margin: 13.25rem 0 0 1rem;
+}
+.nameN{
+    font-size: 13px;
+    margin: 13.25rem 0 0 25rem;
+}
+.nameQ{
+    font-size: 13px;
+    margin: 13.25rem 0 0 32rem;
+}
+.nameL{
+    font-size: 13px;
+    margin: 13.25rem 0 0 39rem;
+}
+.borda2{
+    margin: 12rem 0 0 0;
+    border-bottom:0.10px solid #525252;
+}
+.nameDistrict{
+    font-size: 13px;
+    margin: 14.75rem 0 0 1rem;
+}
+.borda3{
+    margin: 13.25rem 0 0 0;
+    border-bottom:0.10px solid #525252;
+}
+.nameTel{
+    font-size: 13px;
+    margin: 16.25rem 0 0 1rem;
+}
+.borda4{
+    margin: 14.5rem 20rem 0 0;
+    border-bottom:0.10px solid #525252;
+}
+.nameC{
+    font-size: 13px;
+    margin: 16.25rem 0 0 33rem;
+}
+.borda5{
+    margin: 14.5rem 2rem 0 22rem;
+    border-bottom:0.10px solid #525252;
+}
+.nameResp{
+    font-size: 12px;
+    margin: 19rem 0 0 37rem;
+}
+
+/* PDF PROPOSTA */
+.nameGrup{
+    margin: -6rem 0 0 8.75rem;
+}
+.nameLions{
+    font-size: 104px;
+    margin: -0.80rem 0 0 1.30rem;
+}
+.imgW{
+    margin: -8.25rem 0 0 34rem;
+}
+.nam62{
+    margin: -3rem 0 0 28rem;
+}
+.nmTel{
+    font-size: 40px;
+    margin: -1.75rem 0 0 12rem;
+}
+
+.nameProp{
+    margin: 0.25rem 15.5rem 0 15.25rem;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+}
+.nameSer1{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer2{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer3{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer4{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer5{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer6{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer7{
+    margin: 1rem 0 0 1rem ;
+}
+.nameSer8{
+    margin: 1rem 0 0 1rem ;
+}
+.nameRespo{
+    font-size: 12px;
+    margin: 1rem 0 0.75rem 45rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 1rem 2rem 1rem;
+}
+.nameV{
+    font-size: 12px;
+    margin: -0.80rem 0 0.75rem 45rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 1rem 2rem 1rem;
+}
+.nameRS{
+    margin: -2rem 0 0.75rem 35rem;
+}
+.nameLine1{
+    margin: -3.25rem 0 0 7rem;
+    border-bottom:0.10px solid #525252;
+    height: 1px;
+    width: 400px;
+}
+.nameR{
+    margin: -4rem 0 0rem 1rem;
+}
+.nameCarlos{
+    font-size: 40px;
+    margin: -2.3rem 0 0 6rem;
+}
+.imgWhat{
+    margin: -2.75rem 0 0 23rem;
+}
+.nm62{
+    font-size: 18px;
+    margin: -2.25rem 0 0 10rem;
+}
+.namTel{
+    margin: -3.25rem 0 0 13rem;
+}
+.nmOBS{
+    font-size: 15px;
+    margin: -0.25rem 20rem 0 1rem;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+.nmOpt{
+    margin: -1.25rem 0 0 27rem;
+    border: 1px solid black;
+}
+.bordaRow1{
+    border: 2px solid black;
+    height: 150px;
+    border-radius: 5px;
+}
+.bordaRow2{
+    border: 2px solid black;
+    height: 600px;
+    border-radius: 5px;
+}
+.nmMes{
+    margin: -1.25rem 0 0 40rem;
+}
+
+/* PARTE DE BAIXO */
+.bordaRow3{
+    margin: 0.5rem 0 0 0;
+    border: 2px solid black;
+    height: 280px;
+    border-radius: 5px;
+}
+.nmNomeR{
+    margin: 1rem 0 0 1rem;
+}
+
+.borda6{
+    margin: 0 17.75rem 0 9.5rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmRN{
+    margin: -1.25rem 0 0 9.75rem;
+}
+
+.nmCPFCN{
+    margin: -1rem 0 0 28rem;
+}
+
+.borda7{
+    margin: -0.25rem 1.75rem 0 33rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmRC{
+    font-size: 14px;
+    margin: -1.5rem 0 0 38rem;
+}
+
+.nmEnd{
+    margin: 1rem 0 0 1rem;
+}
+
+.nmREnd{
+    margin: -1.5rem 0 0 6rem;
+}
+
+.borda8{
+    margin: -0.25rem 17.75rem 0 5.5rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmQd{
+    margin: -1.25rem 0 0 28rem;
+}
+
+.nmRQd{
+    margin: -1.5rem 0 0 30rem;
+}
+
+.borda9{
+    margin: -0.25rem 12.5rem 0 30rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmLt{
+    margin: -1.25rem 0 0 33rem;
+}
+
+.nmRLt{
+    margin: -1.5rem 0 0 35rem;
+}
+
+.borda10{
+    margin: -0.25rem 7.5rem 0 34.75rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmN{
+    margin: -1.25rem 0 0 38rem;
+}
+
+.nmRNu{
+    margin: -1.5rem 0 0 40rem;
+}
+
+.borda11{
+    margin: -0.25rem 1.75rem 0 39.75rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmSector{
+    margin: 1rem 0 0 1rem;
+}
+
+.nmRSector{
+    margin: -1.5rem 0 0 4rem;
+}
+
+.borda12{
+    margin: -0.25rem 17.75rem 0 3.75rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmFone{
+    margin: -1.25rem 0 0 28rem;
+}
+
+.nmRFone{
+    margin: -1.5rem 0 0 31rem;
+}
+
+.borda13{
+    margin: -0.25rem 1.75rem 0 30.5rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmOpti{
+    margin: 0.75rem 0 0 1rem;
+}
+
+.borda14{
+    margin: -0.25rem 25.5rem 0 14rem;
+    border-bottom:0.10px solid #525252;
+}
+
+.nmRO{
+    margin: -1.5rem 0 0 14.5rem;
+}
+
+.nmdeC{
+    margin: -1.25rem 0 0 20rem;
+}
+
+.nmVM{
+    font-size: 15px;
+    margin: -1.25rem 0 0 28rem;
+}
+
+.nmRVM{
+    margin: -1.25rem 2rem 0 36rem;
+    border: 1px solid black;
+    padding: 0 0 0 2rem;
+}
+
+.nmDT{
+    margin: 1rem 32rem 0 1rem;
+    border: 1px solid black;
+    padding: 2.25rem 0 0 0;
+}
+
+.nmRDT{
+    margin: -1.25rem 0 0 5rem;
+}
+
+.nmDecl{
+    font-size: 15px;
+    margin: -3.75rem 12rem 0 14.25rem;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+.nmDTV{
+    margin: -3.5rem 2rem 0 34.25rem;
+    border: 1px solid black;
+    padding: 0 0 2.25rem 0.25rem;
+}
+
+.nmRDTV{
+    margin: -1.75rem 2rem 0 36.25rem;
+}
+
+.nmClient{
+    font-size: 13px;
+    margin: 4rem 26rem 0.25rem 26rem;
+}
+
+.borda15{
+    margin: -1.5rem 8rem 0.25rem 8rem;
+    border-bottom:0.10px solid #525252;
+}

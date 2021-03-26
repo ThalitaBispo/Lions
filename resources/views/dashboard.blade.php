@@ -161,11 +161,11 @@
 									<i class="material-icons sidebar-icon" title="Editar">edit</i>
 								</a>
 
-								<a href="" target="_blanck" style="cursor:pointer;color:black;text-decoration:none">
+								<a href="{{route('client/relation', ['id' => $cliente->id]) }}" target="_blanck" style="cursor:pointer;color:black;text-decoration:none">
 									<i class="material-icons sidebar-icon" title="Recibo">insert_drive_file</i>
 								</a>
 
-								<a href="" target="_blanck" style="cursor:pointer;color:black;text-decoration:none;margin-right:-20px">
+								<a href="{{route ('cliente/proposta', ['id' => $cliente->id]) }}" target="_blanck" style="cursor:pointer;color:black;text-decoration:none;margin-right:-20px">
 									<i class="material-icons sidebar-icon" title="Proposta de Serviço">descriptioni</i>
 								</a>
 
