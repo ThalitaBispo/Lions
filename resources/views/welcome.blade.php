@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/login.css">
 
+    <link rel="shortcut icon" href="img/leao-preto.png" />
+
   </head>
 
 <body>
@@ -41,12 +43,12 @@
 
         <input type="text" placeholder="Email" name="email" id="email" />
         <input type="password" id="password" name="password" placeholder="Senha"/>
-        <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;top: 200px;
+        <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;top: 280px;
         right: 60px;cursor: pointer;">remove_red_eye</span>
 
         <script>
         function mostrarsenha() {
-          var tipo = document.getElementById("senha");
+          var tipo = document.getElementById("password");
           if(tipo.type === "password") {
             tipo.type = "text";
           }

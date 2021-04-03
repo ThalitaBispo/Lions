@@ -1,5 +1,5 @@
 function mostrarsenha() {
-  var tipo = document.getElementById("senha");
+  var tipo = document.getElementById("password");
   if(tipo.type === "password") {
     tipo.type = "text";
   }
@@ -8,18 +8,8 @@ function mostrarsenha() {
   }
 }
 
-function mostrarsenhaNova() {
-  var nsenha = document.getElementById("novaSenha");
-  if(nsenha.type === "password") {
-    nsenha.type = "text";
-  }
-  else {
-    nsenha.type = "password";
-  }
-}
-
 function mostrarsenhaConf() {
-  var tipo = document.getElementById("confSenha");
+  var tipo = document.getElementById("confirmPassowrd");
   if(tipo.type === "password") {
     tipo.type = "text";
   }

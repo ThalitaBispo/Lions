@@ -20,11 +20,11 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<script type="text/javascript" src="js/cep.js"></script>
-		<script type="text/javascript" src="js/function.js"></script>
-		<script type="text/javascript" src="js/function-delet.js"></script>
+        <script type="text/javascript" src="js/mask.js"></script>
+        <script type="text/javascript" src="js/validaCPFCNPJ.js"></script>
+        <script type="text/javascript" src="js/validaData.js"></script>
 
-    <!-- <script type="text/javascript" src="../../public/js/cep.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script> -->
+        <link rel="shortcut icon" href="img/leao-preto.png" />
 
   </head>
 <body>
@@ -121,12 +121,15 @@
 
                         <div class="form-group">
                         <label>CPF/CNPJ</label>
-                        <input type="text" name="cpf/cnpj" class="form-control" minlength="11" maxlength="18" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+                        <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" minlength="11" maxlength="18" placeholder="000.000.000-00 ou 00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
+                        <!-- <input type="button" value="Validar" class="btn btn-dark"> -->
                         </div>
+
+                        <p id="validar"></p>
 
                         <div class="form-group">
                         <label>Telefone</label>
-                        <input type="text" name="tel" class="form-control" minlength="11" maxlength="16" placeholder="(00) 00000-0000" onkeypress="$(this).mask('(00) 00000-0000')" required>
+                        <input type="text" name="tel" class="form-control" minlength="11" maxlength="15" placeholder="(00) 00000-0000" onkeypress="mascara(this, telefone)" required>
                         </div>
 
                         <div class="form-group">
@@ -136,7 +139,7 @@
 
                         <div class="form-group">
                         <label>CEP</label>
-                        <input type="text" name="cep" class="form-control" id="cep" placeholder="00.000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="$(this).mask('00.000-000')" required>
+                        <input type="text" name="cep" class="form-control" id="cep" maxlength="9" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
                         <br>
                             <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
                         </div>
@@ -183,12 +186,12 @@
                         <div class="form-group row">
                         <div class="col">
                         <label>Data para pagamento</label>
-                        <input type="text" name="date" class="form-control" placeholder="00/00/0000" required>
+                        <input type="text" id="data" name="date" class="form-control" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
                         </div>
 
                         <div class="col">
                         <label>Valor</label>
-                        <input type="text" name="value" class="form-control" placeholder="R$ 0,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});" required>
+                        <input type="text" name="value" class="form-control" placeholder="R$ 00,00" onkeypress="mascara(this, numberToReal)" required>
                         </div>
                         </div>
 
