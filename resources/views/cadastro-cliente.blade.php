@@ -195,6 +195,8 @@
                         </div>
                         </div>
 
+                        <p id="validaData"></p>
+
                         <div class="form-group">
                         <label>Vendedor</label>
                         <input type="text" name="seller" class="form-control" placeholder="Vendedor" required>
