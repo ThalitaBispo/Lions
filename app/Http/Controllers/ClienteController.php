@@ -22,18 +22,19 @@ class ClienteController extends Controller
         if (Auth::check() === true) {
             $dados = $req->all();
 
-            $dados['cpf_cnpj'] = preg_replace('/[^0-9]/', '', $dados['cpf/cnpj']);
+            $dados['cpf_cnpj'] = $dados['cpf/cnpj'];
 
             $cont = $dados['cpf/cnpj'];
 
             //0 == empresa e 1 == pessoa
-            if(strlen($cont) === 11){
+            if(strlen($cont) <= 14){
                 $dados['type'] = 1;
             } else {
                 $dados['type'] = 0;
             }
 
-            $dados['date'] = \Carbon\Carbon::parse($dados['date'])->format('Y/m/d');
+            $date = explode('/', $dados['date']);
+            $dados['date'] = implode([$date[2], '/', $date[1], '/', $date[0]]);
 
             $dados['users_id'] = Auth::user()->id;
 
@@ -57,18 +58,19 @@ class ClienteController extends Controller
 
         $dados = $req->all();
 
-        $dados['cpf_cnpj'] = preg_replace('/[^0-9]/', '', $dados['cpf/cnpj']);
+        $dados['cpf_cnpj'] = $dados['cpf/cnpj'];
 
-            $cont = $dados['cpf/cnpj'];
+        $cont = $dados['cpf/cnpj'];
 
-            //0 == empresa e 1 == pessoa
-            if(strlen($cont) == 11){
-                $dados['type'] = 1;
-            } else {
-                $dados['type'] = 0;
-            }
+        //0 == empresa e 1 == pessoa
+        if(strlen($cont) <= 14){
+            $dados['type'] = 1;
+        } else {
+            $dados['type'] = 0;
+        }
 
-        $dados['date'] = \Carbon\Carbon::parse($dados['date'])->format('Y/m/d');
+        $date = explode('/', $dados['date']);
+        $dados['date'] = implode([$date[2], '/', $date[1], '/', $date[0]]);
 
         $cliente->update($dados);
 

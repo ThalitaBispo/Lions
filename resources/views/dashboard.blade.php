@@ -19,8 +19,6 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<script type="text/javascript" src="js/cep.js"></script>
-		<script type="text/javascript" src="js/function.js"></script>
-		<script type="text/javascript" src="js/function-delet.js"></script>
 
         <link rel="shortcut icon" href="img/leao-preto.png" />
 

@@ -122,7 +122,6 @@
                         <div class="form-group">
                         <label>CPF/CNPJ</label>
                         <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" minlength="11" maxlength="18" placeholder="000.000.000-00 ou 00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
-                        <!-- <input type="button" value="Validar" class="btn btn-dark"> -->
                         </div>
 
                         <p id="validar"></p>
@@ -139,7 +138,7 @@
 
                         <div class="form-group">
                         <label>CEP</label>
-                        <input type="text" name="cep" class="form-control" id="cep" maxlength="9" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
+                        <input type="text" name="cep" class="form-control" id="cep" maxlength="10" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
                         <br>
                             <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
                         </div>

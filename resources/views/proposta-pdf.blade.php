@@ -253,7 +253,7 @@
             </div>
 
             <div class="col-sm-4">
-                <p class="nmRO">{{$clientes->date}}</p>
+                <p class="nmRO">{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}</p>
             </div>
 
             <div class="col-xl-2">
@@ -277,7 +277,7 @@
             </div>
 
             <div class="col-xl-2">
-                <p class="nmRDT">28/02/2000</p>
+                <p class="nmRDT">{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}</p>
             </div>
 
             <div class="col-sm-4">
@@ -291,7 +291,7 @@
             </div>
 
             <div class="col-sm-4">
-                <p class="nmRDTV">{{$clientes->date}}</p>
+                <p class="nmRDTV">{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}</p>
             </div>
 
             <div class="col-sm-4">

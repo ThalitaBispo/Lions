@@ -60,4 +60,3 @@ function numberToReal(v) {
     return v;
 
 }
-

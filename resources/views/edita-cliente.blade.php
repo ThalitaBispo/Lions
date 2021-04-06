@@ -22,8 +22,9 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<script type="text/javascript" src="{{ asset('js/cep.js') }}"></script>
-		<script type="text/javascript" src="js/function.js"></script>
-		<script type="text/javascript" src="js/function-delet.js"></script>
+		<script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/validaCPFCNPJ.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/validaData.js') }}"></script>
 
 </head>
 <body>
@@ -120,12 +121,14 @@
 
                   <div class="form-group">
                     <label>CPF/CNPJ</label>
-                    <input type="text" name="cpf/cnpj" class="form-control" value="{{$clientes->cpf_cnpj}}" minlength="14" maxlength="14" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+                    <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" value="{{ $clientes->cpf_cnpj }}" minlength="11" maxlength="18" placeholder="00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
                   </div>
+
+                  <p id="validar"></p>
 
                   <div class="form-group">
                     <label>Telefone</label>
-                    <input type="text" name="tel" class="form-control" value="{{$clientes->tel}}" minlength="11" maxlength="12" placeholder="(00) 00000-0000" onkeypress="$(this).mask('(00) 00000-0000')" required>
+                    <input type="text" name="tel" class="form-control" value="{{$clientes->tel}}" minlength="11" maxlength="15" placeholder="(00) 00000-0000" onkeypress="mascara(this, telefone)" required>
                   </div>
 
                   <div class="form-group">
@@ -135,7 +138,7 @@
 
                   <div class="form-group">
                     <label>CEP</label>
-                    <input type="text" name="cep" class="form-control" value="{{$clientes->cep}}" id="cep" placeholder="00.000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="$(this).mask('00.000-000')" required>
+                    <input type="text" name="cep" class="form-control"  maxlength="10" value="{{$clientes->cep}}" id="cep" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
                     <br>
                     <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
                   </div>
@@ -181,15 +184,17 @@
 
                   <div class="form-group row">
                     <div class="col">
-                      <label>Dia para pagamento</label>
-                      <input type="text" name="date" class="form-control" value="{{$clientes->date}}" placeholder="00/00/0000" required>
+                      <label>Data para pagamento</label>
+                      <input type="text" id="data" name="date" class="form-control" value="{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
                     </div>
 
                     <div class="col">
                       <label>Valor</label>
-                      <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});" required>
+                      <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="mascara(this, numberToReal)" required>
                     </div>
                   </div>
+
+                  <p id="validaData"></p>
 
                   <div class="form-group">
                   <label>Vendedor</label>
