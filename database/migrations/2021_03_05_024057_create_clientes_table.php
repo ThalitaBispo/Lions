@@ -16,6 +16,7 @@ class CreateClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email');
             $table->string('cpf_cnpj');
             $table->string('sector')->nullable();
             $table->boolean('type');
@@ -29,6 +30,8 @@ class CreateClientesTable extends Migration
             $table->integer('court');
             $table->integer('lot');
             $table->date('date');
+            $table->string('day');
+            $table->date('newdate');
             $table->decimal('value', 6, 2);
             $table->string('seller');
             $table->unsignedBigInteger('users_id');

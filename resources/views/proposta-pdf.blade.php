@@ -105,11 +105,19 @@
             </div>
 
             <div class="col-sm-4">
+                <p class="nmRespo"><strong>Carlos</strong></p>
+            </div>
+
+            <div class="col-sm-4">
                 <p class="nameV"><strong>Valor da mensalidade</strong></p>
             </div>
 
             <div class="col-sm-4">
                 <h4 class="nameRS"><strong>R$ </strong></h4>
+            </div>
+
+            <div class="col-sm-4">
+                <h4 class="nmRS"><strong>{{$clientes->value}}</strong></h4>
             </div>
 
             <div class="col-sm-4">
@@ -142,6 +150,10 @@
 
             <div class="col-sm-4">
                 <p class="nmOpt">Opção de pagamento dia</p>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="nameOpt">{{$clientes->day}}</p>
             </div>
 
             <div class="col-sm-4">
@@ -253,7 +265,7 @@
             </div>
 
             <div class="col-sm-4">
-                <p class="nmRO">{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}</p>
+                <p class="nmRO">{{$clientes->day}} </p>
             </div>
 
             <div class="col-xl-2">
@@ -277,7 +289,7 @@
             </div>
 
             <div class="col-xl-2">
-                <p class="nmRDT">{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}</p>
+                <p class="nmRDT">{{ \Carbon\Carbon::parse($clientes->newdate)->format('d/m/Y') }}</p>
             </div>
 
             <div class="col-sm-4">

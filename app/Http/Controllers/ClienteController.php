@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Cliente;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,7 +35,10 @@ class ClienteController extends Controller
             }
 
             $date = explode('/', $dados['date']);
+            $dados['day'] = $date[0];
             $dados['date'] = implode([$date[2], '/', $date[1], '/', $date[0]]);
+
+            $dados['newdate'] = date('Y-m-d');
 
             $dados['users_id'] = Auth::user()->id;
 

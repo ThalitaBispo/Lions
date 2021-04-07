@@ -163,6 +163,9 @@
     border-radius: 5px;
     padding: 0 1rem 2rem 1rem;
 }
+.nmRespo{
+    margin: -2rem 0 0 38rem;
+}
 .nameV{
     font-size: 12px;
     margin: -0.80rem 0 0.75rem 45rem;
@@ -172,6 +175,9 @@
 }
 .nameRS{
     margin: -2rem 0 0.75rem 35rem;
+}
+.nmRS{
+    margin: -2rem 0 0 38rem;
 }
 .nameLine1{
     margin: -3.25rem 0 0 7rem;
@@ -207,6 +213,9 @@
     margin: -1.25rem 0 0 27rem;
     border: 1px solid black;
 }
+.nameOpt{
+    margin: -1.25rem 0 0 38rem;
+}
 .bordaRow1{
     border: 2px solid black;
     height: 150px;
@@ -231,146 +240,114 @@
 .nmNomeR{
     margin: 1rem 0 0 1rem;
 }
-
 .borda6{
     margin: 0 17.75rem 0 9.5rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmRN{
     margin: -1.25rem 0 0 9.75rem;
 }
-
 .nmCPFCN{
     margin: -1rem 0 0 28rem;
 }
-
 .borda7{
     margin: -0.25rem 1.75rem 0 33rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmRC{
     font-size: 14px;
     margin: -1.5rem 0 0 38rem;
 }
-
 .nmEnd{
     margin: 1rem 0 0 1rem;
 }
-
 .nmREnd{
     margin: -1.5rem 0 0 6rem;
 }
-
 .borda8{
     margin: -0.25rem 17.75rem 0 5.5rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmQd{
     margin: -1.25rem 0 0 28rem;
 }
-
 .nmRQd{
     margin: -1.5rem 0 0 30rem;
 }
-
 .borda9{
     margin: -0.25rem 12.5rem 0 30rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmLt{
     margin: -1.25rem 0 0 33rem;
 }
-
 .nmRLt{
-    margin: -1.5rem 0 0 35rem;
+    margin: -1.5rem 0 0 34.75rem;
 }
-
 .borda10{
     margin: -0.25rem 7.5rem 0 34.75rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmN{
     margin: -1.25rem 0 0 38rem;
 }
-
 .nmRNu{
     margin: -1.5rem 0 0 40rem;
 }
-
 .borda11{
     margin: -0.25rem 1.75rem 0 39.75rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmSector{
     margin: 1rem 0 0 1rem;
 }
-
 .nmRSector{
     margin: -1.5rem 0 0 4rem;
 }
-
 .borda12{
     margin: -0.25rem 17.75rem 0 3.75rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmFone{
     margin: -1.25rem 0 0 28rem;
 }
-
 .nmRFone{
     margin: -1.5rem 0 0 31rem;
 }
-
 .borda13{
     margin: -0.25rem 1.75rem 0 30.5rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmOpti{
     margin: 0.75rem 0 0 1rem;
 }
-
 .borda14{
     margin: -0.25rem 25.5rem 0 14rem;
     border-bottom:0.10px solid #525252;
 }
-
 .nmRO{
-    margin: -1.5rem 0 0 14.5rem;
+    margin: -1.5rem 0 0 16rem;
 }
-
 .nmdeC{
     margin: -1.25rem 0 0 20rem;
 }
-
 .nmVM{
     font-size: 15px;
     margin: -1.25rem 0 0 28rem;
 }
-
 .nmRVM{
     margin: -1.25rem 2rem 0 36rem;
     border: 1px solid black;
     padding: 0 0 0 2rem;
 }
-
 .nmDT{
     margin: 1rem 32rem 0 1rem;
     border: 1px solid black;
     padding: 2.25rem 0 0 0;
 }
-
 .nmRDT{
     margin: -1.25rem 0 0 5rem;
 }
-
 .nmDecl{
     font-size: 15px;
     margin: -3.75rem 12rem 0 14.25rem;
@@ -378,22 +355,18 @@
     color: white;
     background-color: black;
 }
-
 .nmDTV{
     margin: -3.5rem 2rem 0 34.25rem;
     border: 1px solid black;
     padding: 0 0 2.25rem 0.25rem;
 }
-
 .nmRDTV{
     margin: -1.75rem 2rem 0 36.25rem;
 }
-
 .nmClient{
     font-size: 13px;
     margin: 4rem 26rem 0.25rem 26rem;
 }
-
 .borda15{
     margin: -1.5rem 8rem 0.25rem 8rem;
     border-bottom:0.10px solid #525252;

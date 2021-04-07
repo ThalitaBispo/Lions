@@ -120,6 +120,11 @@
                         </div>
 
                         <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
                         <label>CPF/CNPJ</label>
                         <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" minlength="11" maxlength="18" placeholder="000.000.000-00 ou 00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
                         </div>
