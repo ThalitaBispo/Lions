@@ -1,5 +1,7 @@
 <?php
 
+use App\Cliente;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,6 +52,10 @@ Route::middleware(['web'])->group(function () {
     Route::get('/cliente/delete/{id}', ['as' => 'cliente/delete', 'uses' => 'ClienteController@destroy']);
 
     //ROTA EMAIL
-    Route::get('/send-email', 'MainController@sendEmail');
+    Route::get('/send-email/{id}', 'MailController@sendEmail')->name('Mail');
+    Route::get('/send-email/proposta/{id}', 'MailController@sendEmailPropos')->name('Mail/propos');
+
+    //ROTA SEARCH
+    Route::post('/dashboard/search', 'ClienteController@index')->name('search');
 
 });

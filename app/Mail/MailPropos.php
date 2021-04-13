@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Mail;
+use App\Cliente;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use PDF;
-use App\Cliente;
 
-class Mail extends Mailable
+class MailPropos extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,10 +32,10 @@ class Mail extends Mailable
     public function build()
     {
         $id = $this->id;
-        $clients = Cliente::where('id', $id)->get();
-        $pdf = PDF::loadView('client-pdf', compact('clients'));
+        $cliente = Cliente::where('id', $id)->get();
+        $pdf = PDF::loadView('proposta-pdf', compact('cliente'));
         return $this->subject('Teste envio de email')
             ->view('email.TestMail')
-            ->attachData($pdf->output(), "recibo.pdf");
+            ->attachData($pdf->output(), "propostadeservico.pdf");
     }
 }

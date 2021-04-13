@@ -189,7 +189,7 @@
 
                   <div class="form-group row">
                     <div class="col">
-                      <label>Data para pagamento</label>
+                      <label>Próxima data para pagamento</label>
                       <input type="text" id="data" name="date" class="form-control" value="{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
                     </div>
 

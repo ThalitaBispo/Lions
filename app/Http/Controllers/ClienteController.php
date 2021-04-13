@@ -2,16 +2,37 @@
 
 namespace App\Http\Controllers;
 use App\Cliente;
-use DateTime;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ClienteController extends Controller
 {
-    public function index()
-    {
-        //
-    }
+    public function index(Request $request){
+
+        if ($request->has('name')) {
+            $clientes = DB::table('clientes')->where('name', 'like', '%' . $request->name . '%')
+            ->paginate();
+        }
+
+        if ($request->has('street')) {
+            $clientes = DB::table('clientes')->where('street', 'like', '%' . $request->street . '%')
+            ->paginate();
+        }
+
+        if ($request->has('district')) {
+            $clientes = DB::table('clientes')->where('district', 'like', '%' . $request->district . '%')
+            ->paginate();
+        }
+
+        if ($request->has('cpf_cnpj')) {
+            $clientes = DB::table('clientes')->where('cpf_cnpj', 'like', '%' . $request->cpf_cnpj . '%')
+            ->paginate();
+        }
+
+        return view('dashboard',compact('clientes'));
+
+        }
 
     public function show()
     {
