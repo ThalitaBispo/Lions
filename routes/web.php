@@ -44,6 +44,8 @@ Route::middleware(['web'])->group(function () {
     Route::get('/user/relation', 'PDFController@user')->name('user/relation');
     Route::get('/cliente/relation/{id}', 'PDFController@client')->name('client/relation');
     Route::get('/cliente/proposta/{id}', 'PDFController@proposta')->name('cliente/proposta');
+    Route::get('/cashier/pdf', 'PDFController@cashier')->name('cashier');
+    Route::get('/whatsapp/pdf/{id}', 'PDFController@whatsapp')->name('whatsapp');
 
     //ROTAS CLIENTE
     Route::get('/cliente', 'AdminClienteController@createCliente')->name('cliente');
@@ -54,8 +56,16 @@ Route::middleware(['web'])->group(function () {
     //ROTA EMAIL
     Route::get('/send-email/{id}', 'MailController@sendEmail')->name('Mail');
     Route::get('/send-email/proposta/{id}', 'MailController@sendEmailPropos')->name('Mail/propos');
+    //FORGOT PASSWORD
+    Route::get('/forgot-password', 'ForgotPasswordController@show')->name('forgot');
+    Route::post('/send-forgot-password', 'MailController@forgotPassword')->name('sendForgot');
+    Route::get('/password-recovery', 'ForgotPasswordController@index')->name('recovery');
+    Route::post('/recovery-password', 'RecoveryController@update')->name('recovery-password');
 
     //ROTA SEARCH
     Route::post('/dashboard/search', 'ClienteController@index')->name('search');
+
+    //ROTA DOWNLOAD
+    Route::get('/download/{id}', 'DownloadController@show')->name('download');
 
 });

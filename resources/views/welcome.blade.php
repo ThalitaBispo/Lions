@@ -46,6 +46,8 @@
         <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;top: 280px;
         right: 60px;cursor: pointer;">remove_red_eye</span>
 
+        <a href="{{ route('forgot') }}" style="color:black;text-decoration:none">Esqueci a senha</a>
+
         <script>
         function mostrarsenha() {
           var tipo = document.getElementById("password");
@@ -59,7 +61,7 @@
 
         </script>
 
-        <button class="btn btn-lg btn-success btn-block" type="submit">login</button>
+        <button class="btn btn-lg btn-success btn-block mt-2" type="submit">login</button>
       </form>
 
     </div>

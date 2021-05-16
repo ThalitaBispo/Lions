@@ -371,3 +371,42 @@
     margin: -1.5rem 8rem 0.25rem 8rem;
     border-bottom:0.10px solid #525252;
 }
+
+/*CASHIER */
+.card{
+    margin: 3rem 30rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border: 1px solid black;
+    background-color: green;
+}
+
+.card-title{
+    padding: 0.25rem 1rem 0.25rem 3rem;
+    font-size: 16px;
+    color: white;
+}
+
+.card-text{
+    font-size: 25px;
+    padding: 0.25rem 0 0 3rem;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    margin: 1rem 1rem 1rem 4rem;
+  }
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+  }
+
+.pth{
+    font: bold;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.ptd{
+    margin: 1rem 1rem 1rem 2rem;
+}

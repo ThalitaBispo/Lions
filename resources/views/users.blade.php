@@ -149,7 +149,9 @@
 
                                     @if($registro->id !== Auth::user()->id)
 
+                                    @can('notDeletADM', $registro)
                                     <a href="{{ route('user/delete', ['id' => $registro->id]) }}" class="btn btn-danger btn-sm mb-1"onClick="return confirm('Deseja mesmo apagar o usuario selecionado?')">Excluir</a>
+                                    @endcan
 
                                     @endif
 

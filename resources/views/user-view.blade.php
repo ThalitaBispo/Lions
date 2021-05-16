@@ -21,9 +21,6 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <script type="text/javascript" src="{{ asset('js/ShowPassword.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/validaPassword.js') }}"></script>
-
 </head>
 <body>
 
@@ -105,12 +102,8 @@
                         <div class="row">
                             <div class="col">
 
-                                <h4 class="mt-5">Editar Usuário</h4>
+                                <h4 class="mt-5">Visualizar Usuário</h4>
                                 <hr>
-
-                        <form class="mt-4 mb-5" method="POST" action="{{ route ('user/update', ['id' => $registro->id]) }}">
-
-                        {{ csrf_field() }}
 
                             <div class="form-group">
                             <label>Nome</label>
@@ -123,31 +116,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Administrador</label>
-                                    <select name="administrator" class="form-control">
-                                        <option></option>
-                                        <option value="Sim">Sim</option>
-                                        <option value="Não">Não</option>
-                                    </select>
-                            </div>
-
-                            <div class="form-group">
                             <label>Senha</label>
                             <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********">
-                            <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
-                            right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
-
-                            <div class="form-group">
-                            <label >Confirmar Senha:</label>
-                            <input type="password" id="confirmPassowrd" name="confirmPassowrd" class="form-control" id="recipient-name">
-                            <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
-                                    right: 60px;cursor: pointer;">remove_red_eye</span>
-                            </div>
-
-                            <button type="submit" class="btn btn-dark mt-4">Salvar</button>
-
-                        </form>
 
                             </div>
                         </div>

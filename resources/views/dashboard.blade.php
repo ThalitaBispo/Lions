@@ -110,7 +110,7 @@
 
 						<form>
 							<div class="form-group row">
-								<label class="col-sm-9 col-form-label">Dashboard - Usuário Logado(NÃO ESQUECE DE TIRAR ESSE TEXTO): {{ Auth::user()->name }}</label>
+								<label class="col-sm-9 col-form-label">Dashboard - {{ Auth::user()->name }}</label>
                                 <a href="{{ route ('logout') }}">LOGOFF</a>
 							</div>
 						</form>
@@ -163,6 +163,14 @@
                         </form>
                     </nav>
                 </div>
+
+                <div class="col-md-6">
+                    <nav class="navbar navbar-light">
+                        <a href="{{ route('cashier') }}" target="_blanck">
+                            <button class="btn btn-dark my-2 my-sm-0" type="submit">PDF - Clientes</button>
+                        </a>
+                    </nav>
+                </div>
 			</div>
 
 			<div class="table-overflow">
@@ -195,7 +203,7 @@
 									<i class="material-icons sidebar-icon" title="Editar">edit</i>
 								</a>
 
-								<a href="{{route('client/relation', ['id' => $cliente->id]) }}" target="_blanck" style="cursor:pointer;color:black;text-decoration:none" data-toggle="modal" data-target="#exampleModal">
+								<a href="{{route('client/relation', ['id' => $cliente->id]) }}" target="_blanck" style="cursor:pointer;color:black;text-decoration:none">
 									<i class="material-icons sidebar-icon" title="Recibo">insert_drive_file</i>
 								</a>
 
@@ -203,12 +211,18 @@
 									<i class="material-icons sidebar-icon" title="Proposta de Serviço">descriptioni</i>
 								</a>
 
+                                @can('delet', $cliente)
 								<a href="{{ route('cliente/delete', ['id' => $cliente->id]) }}" style="cursor:pointer;color:black;text-decoration:none;margin-left:-5px;" onClick="return confirm('Deseja mesmo apagar o cliente selecionado?')">
 									<i class="material-icons sidebar-icon" title="Deletar">delete</i>
 								</a>
+                                @endcan
 
                                 <a data-toggle="modal" data-toggle="modal" data-target="#exampleModal" data-whatever="{{$cliente->id}}" style="cursor:pointer;color:black;text-decoration:none">
 									<i class="material-icons sidebar-icon" title="Enviar por email">email</i>
+								</a>
+
+                                <a href="{{ route('whatsapp', ['id' => $cliente->id]) }}" target="_blanck" style="cursor:pointer;color:black;text-decoration:none">
+									<i class="material-icons sidebar-icon" title="Enviar por email">share</i>
 								</a>
 
 							</td>

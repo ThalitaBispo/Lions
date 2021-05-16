@@ -95,6 +95,7 @@ class ClienteController extends Controller
         }
 
         $date = explode('/', $dados['date']);
+        $dados['day'] = ($date[0]);
         $dados['date'] = implode([$date[2], '/', $date[1], '/', $date[0]]);
 
         $cliente->update($dados);
@@ -112,6 +113,10 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::find($id);
         $cliente->delete();
+
+        if(!$this->authorize('delet', $cliente)) {
+            return response([], 403);
+        }
 
         if ($cliente) {
             return redirect()->route('dashboard')->with('success', 'Excluido com sucesso!');

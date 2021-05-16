@@ -14,7 +14,7 @@
 
     @foreach($users as $user)
 
-    <h2>{{$user->id}} - {{$user->name}}</h2>
+    <h2>{{$user->name}}</h2>
     <h2>{{$user->emai}}</h2>
 
     @endforeach

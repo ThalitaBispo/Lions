@@ -8,8 +8,11 @@
 </head>
 <body>
 
+    <h4>{{$details['title']}}</h4>
+    <br>
+    <p>{{$details['body']}}</p>
 
-    <p>Enviou :)</p>
+    <p><a href="{{ route('recovery') }}"> Link </a></p>
 
 </body>
 </html>

@@ -52,6 +52,7 @@
                 <div class="col-xl-4">
                     <p class="nameService"><strong>SERVIÇO DE MONITORAMENTO</strong></p>
                 </div>
+
                 <div class="col-xl-4">
                     <p class="nameVencimento"><strong>Vencimento: {{ \Carbon\Carbon::parse($client->date)->format('d/m/Y') }}</strong></p>
                 </div>

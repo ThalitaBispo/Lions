@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 		<!-- script -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -19,19 +19,19 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-		<script type="text/javascript" src="js/cep.js"></script>
-        <script type="text/javascript" src="js/mask.js"></script>
-        <script type="text/javascript" src="js/validaCPFCNPJ.js"></script>
-        <script type="text/javascript" src="js/validaData.js"></script>
+		<script type="text/javascript" src="{{ asset('js/cep.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/validaCPFCNPJ.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/validaData.js') }}"></script>
 
-        <link rel="shortcut icon" href="img/leao-preto.png" />
+        <link rel="shortcut icon" href="{{ asset('img/leao-preto.png') }}" />
 
   </head>
 <body>
 
         <!-- menu -->
         <div class="nav-side-menu">
-		    <div class="brand mt-4 mb-4"> <img src="img/_grupo lions.png" width="200px"> </div>
+		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/_grupo lions.png') }}" width="200px"> </div>
 		        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 		        <div class="menu-list">

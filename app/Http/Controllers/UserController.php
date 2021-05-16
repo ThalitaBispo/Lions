@@ -28,6 +28,12 @@ class UserController extends Controller
         if (Auth::check() === true) {
             $dados = $req->all();
 
+            if($dados['administrator'] == 'Sim'){
+                $dados['administrator'] = 1;
+            } else {
+                $dados['administrator'] = 0;
+            }
+
             $dados['password'] = bcrypt($dados['password']);
 
             //Remover o confirmPassowrd pq ele não vai por banco de dados
@@ -44,15 +50,20 @@ class UserController extends Controller
 
         }
 
-        return redirect()->route('home');
+        //return redirect()->route('home');
 
     }
 
     public function show($id)
     {
         if (Auth::check() === true) {
-            $user = User::findOrFail($id);
-            echo ($user);
+            $registro = User::findOrFail($id);
+
+            if(!$this->authorize('notDeletADM', $registro)) {
+                return response([], 403);
+            }
+
+            return view('user-view', compact('registro'));
         }
 
         return redirect()->route('home');
@@ -64,6 +75,12 @@ class UserController extends Controller
             $user = User::findOrFail($id);
 
             $data = $request->all();
+
+            if($data['administrator'] == 'Sim'){
+                $data['administrator'] = 1;
+            } else {
+                $data['administrator'] = 0;
+            }
 
             //Aqui caso precise de ajuda para atualizar a senha do usuário me avise
 

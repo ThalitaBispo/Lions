@@ -124,6 +124,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label>Administrador</label>
+                                            <select name="administrator" class="form-control">
+                                                <option></option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                    </div>
+
+                                    <div class="form-group">
                                         <label>Senha</label>
                                         <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" placeholder="***********">
                                         <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
