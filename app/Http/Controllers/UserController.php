@@ -25,7 +25,7 @@ class UserController extends Controller
     public function create(Request $req)
     {
 
-        if (Auth::check() === true) {
+        //if (Auth::check() === true) {
             $dados = $req->all();
 
             if($dados['administrator'] == 'Sim'){
@@ -48,7 +48,7 @@ class UserController extends Controller
                 'create' => true,
             ]);
 
-        }
+        //}
 
         //return redirect()->route('home');
 

@@ -43,8 +43,8 @@
 
         <input type="text" placeholder="Email" name="email" id="email" />
         <input type="password" id="password" name="password" placeholder="Senha"/>
-        <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;top: 280px;
-        right: 60px;cursor: pointer;">remove_red_eye</span>
+        <span class="material-icons" onclick="mostrarsenha();" style="position: relative;top: -50px;
+        left: 140px;cursor: pointer;">remove_red_eye</span>
 
         <a href="{{ route('forgot') }}" style="color:black;text-decoration:none">Esqueci a senha</a>
 

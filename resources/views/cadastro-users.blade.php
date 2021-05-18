@@ -107,7 +107,6 @@
 
                                 <h4 class="mt-5">Add Usuário</h4>
                                 <hr>
-
                                 <form class="mt-4 mb-5" id="form_user" method="post" action="{{route ('user/create')}}">
 
                                     {{ csrf_field() }}
@@ -132,6 +131,8 @@
                                             </select>
                                     </div>
 
+                                    <p id="validaPass"></p>
+
                                     <div class="form-group">
                                         <label>Senha</label>
                                         <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" placeholder="***********">
@@ -142,14 +143,14 @@
 
                                     <div class="form-group">
                                         <label>Confirmar Senha</label>
-                                        <input type="password" id="confirmPassowrd" name="confirmPassowrd" class="form-control" minlength="6" maxlength="8" placeholder="***********">
+                                        <input type="password" onblur="validaPass();" id="confirmPassowrd" name="confirmPassowrd" class="form-control" minlength="6" maxlength="8" placeholder="***********">
                                         <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
                                             right: 60px;cursor: pointer;">remove_red_eye</span>
                                     </div>
 
                                     <p id="validarP"></p>
 
-                                    <button type="submit"onclick="validaPass();"  class="btn btn-dark mt-4">Salvar</button>
+                                    <button type="submit" class="btn btn-dark mt-4">Salvar</button>
 
 
                                 </form>

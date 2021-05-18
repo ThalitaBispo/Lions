@@ -168,7 +168,7 @@
 
                         <div class="col">
                         <label>Lt.</label>
-                        <input type="number" name="lot" class="form-control" placeholder="00000"required >
+                        <input type="number" name="lot" class="form-control" placeholder="00000">
                         </div>
                         </div>
 

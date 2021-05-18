@@ -28,7 +28,7 @@ class CreateClientesTable extends Migration
             $table->string('state');
             $table->integer('number');
             $table->integer('court');
-            $table->integer('lot');
+            $table->integer('lot')->nullable();
             $table->date('date');
             $table->string('day');
             $table->date('newdate');
