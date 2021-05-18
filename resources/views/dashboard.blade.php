@@ -85,13 +85,13 @@
 		                </ul>
 
 						<li>
-		                    <a href="index.php">
+                            <a href="{{ route ('logout') }}">
                                 <div class="row">
                                     <div class="col-md-2 iconNone">
                                         <i class="material-icons sidebar-icon">exit_to_app</i>
                                     </div>
                                     <div class="col-md-2" style="margin-top:-5px">
-                                        Sair
+                                     Sair
                                     </div>
                                 </div>
                             </a>
