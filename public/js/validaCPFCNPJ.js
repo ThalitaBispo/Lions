@@ -69,14 +69,7 @@ if (val.length == 14) {
           "</div>";
           return document.getElementById("validar").innerHTML += alert;
       } else {
-          //return true;
-          alert = "<div class='alert alert-warning alert-dismissible fade show' role='alert'>" +
-          "<strong> CPF válido!!" +
-          "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +
-          "<span aria-hidden='true'>&times;</span>" +
-          "</button>" +
-          "</div>";
-          return document.getElementById("validar").innerHTML += alert;
+          return true;
       }
   } else if (val.length == 18) {
       var cnpj = val.trim();
@@ -160,14 +153,7 @@ if (val.length == 14) {
           "</div>";
           return document.getElementById("validar").innerHTML += alert;
       } else {
-          //return true;
-          alert = "<div class='alert alert-warning alert-dismissible fade show' role='alert'>" +
-          "<strong> CNPJ válido!!" +
-          "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +
-          "<span aria-hidden='true'>&times;</span>" +
-          "</button>" +
-          "</div>";
-          return document.getElementById("validar").innerHTML += alert;
+          return true;
       }
   } else {
       return false;

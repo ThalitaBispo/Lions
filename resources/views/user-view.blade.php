@@ -115,11 +115,6 @@
                             <input type="email" name="email" class="form-control" value="{{$registro->email}}" placeholder="Lions@lions.com" disabled>
                             </div>
 
-                            <div class="form-group">
-                            <label>Senha</label>
-                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********" disabled>
-                            </div>
-
                             </div>
                         </div>
                     </div>

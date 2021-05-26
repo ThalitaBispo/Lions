@@ -108,7 +108,7 @@
                                 <h4 class="mt-5">Editar Usuário</h4>
                                 <hr>
 
-                        <form class="mt-4 mb-5" method="POST" action="{{ route ('user/update', ['id' => $registro->id]) }}">
+                        <form class="mt-4 mb-5" method="POST">
 
                         {{ csrf_field() }}
 
@@ -132,20 +132,29 @@
                             </div>
 
                             <div class="form-group">
-                            <label>Senha</label>
-                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********">
+                            <label>Senha Atual</label>
+                                <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
                             <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
 
                             <div class="form-group">
-                            <label >Confirmar Senha:</label>
-                            <input type="password" id="confirmPassowrd" name="confirmPassowrd" class="form-control" id="recipient-name">
-                            <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
-                                    right: 60px;cursor: pointer;">remove_red_eye</span>
+                            <label>Senha</label>
+                                <input type="password" id="newPass" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
+                            <span class="material-icons" onclick="mostrarsenhaNova();" style="position: absolute;margin-top:-30px;
+                            right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
 
-                            <button type="submit" class="btn btn-dark mt-4">Salvar</button>
+                            <p id="validaPass"> </p>
+
+                            <div class="form-group">
+                            <label >Confirmar Senha:</label>
+                                <input type="password" id="confirmPassowrd" name="confirmPassowrd" minlength="6" maxlength="8" class="form-control" id="recipient-name" placeholder="***********" required>
+                            <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
+                            right: 60px;cursor: pointer;">remove_red_eye</span>
+                            </div>
+
+                            <button onclick="validaPass()" type="submit" class="btn btn-dark mt-4">Salvar</button>
 
                         </form>
 
