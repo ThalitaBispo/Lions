@@ -26,7 +26,7 @@
 
     <!-- menu -->
     <div class="nav-side-menu">
-		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/_grupo lions.png') }}" width="200px"> </div>
+		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/grupo-lions.png') }}" width="200px"> </div>
 		        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 		        <div class="menu-list">
@@ -78,7 +78,7 @@
 		                </ul>
 
 						<li>
-		                    <a href="index.php">
+		                    <a href="{{ route ('logout') }}">
                                 <div class="row">
                                     <div class="col-md-2 iconNone">
                                         <i class="material-icons sidebar-icon">exit_to_app</i>
@@ -107,17 +107,17 @@
 
                             <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" name="name" class="form-control" value="{{$registro->name}}" placeholder="Nome">
+                            <input type="text" name="name" class="form-control" value="{{$registro->name}}" placeholder="Nome" disabled>
                             </div>
 
                             <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" class="form-control" value="{{$registro->email}}" placeholder="Lions@lions.com">
+                            <input type="email" name="email" class="form-control" value="{{$registro->email}}" placeholder="Lions@lions.com" disabled>
                             </div>
 
                             <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********">
+                            <input type="password" id="password" name="password"class="form-control" minlength="6" maxlength="8" value="{{$registro->password}}" placeholder="***********" disabled>
                             </div>
 
                             </div>

@@ -31,7 +31,7 @@
 
         <!-- menu -->
         <div class="nav-side-menu">
-		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/_grupo lions.png') }}" width="200px"> </div>
+		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/grupo-lions.png') }}" width="200px"> </div>
 		        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 		        <div class="menu-list">
@@ -83,7 +83,7 @@
 		                </ul>
 
 						<li>
-		                    <a href="index.php">
+		                    <a href="{{ route ('logout') }}">
                                 <div class="row">
                                     <div class="col-md-2 iconNone">
                                         <i class="material-icons sidebar-icon">exit_to_app</i>

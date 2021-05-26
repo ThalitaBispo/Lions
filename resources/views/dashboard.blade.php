@@ -33,7 +33,7 @@
 
 		<!-- menu -->
 		<div class="nav-side-menu">
-		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/_grupo lions.png') }}" width="200px"> </div>
+		    <div class="brand mt-4 mb-4"> <img src="{{ asset('img/grupo-lions.png') }}" width="200px"> </div>
 		    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
 		        <div class="menu-list">
@@ -111,7 +111,6 @@
 						<form>
 							<div class="form-group row">
 								<label class="col-sm-9 col-form-label">Dashboard - {{ Auth::user()->name }}</label>
-                                <a href="{{ route ('logout') }}">LOGOFF</a>
 							</div>
 						</form>
 

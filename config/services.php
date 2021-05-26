@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'sendinblue' => [
+        'v3'    => [
+            'key'   => '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'
+        ]
+    ],
+
 ];
