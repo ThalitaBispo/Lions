@@ -108,7 +108,7 @@
                                 <h4 class="mt-5">Editar Usuário</h4>
                                 <hr>
 
-                        <form class="mt-4 mb-5" method="POST">
+                        <form class="mt-4 mb-5" method="POST" action="{{ route ('user/update', ['id' => $registro->id]) }}">
 
                         {{ csrf_field() }}
 
@@ -131,6 +131,12 @@
                                     </select>
                             </div>
 
+                            @if(session('mensagem'))
+                                <div class="alert alert-success">
+                                    <p>{{session('mensagem')}}</p>
+                                </div>
+                            @endif
+
                             <div class="form-group">
                             <label>Senha Atual</label>
                                 <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
@@ -139,8 +145,8 @@
                             </div>
 
                             <div class="form-group">
-                            <label>Senha</label>
-                                <input type="password" id="newPass" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
+                            <label>Nova Senha</label>
+                                <input type="password" id="newPass" name="newPass" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
                             <span class="material-icons" onclick="mostrarsenhaNova();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>

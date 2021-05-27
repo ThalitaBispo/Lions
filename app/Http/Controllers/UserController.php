@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -82,18 +83,26 @@ class UserController extends Controller
                 $data['administrator'] = 0;
             }
 
-            //Aqui caso precise de ajuda para atualizar a senha do usuário me avise
+            $oldsenha = $data['password'];
 
-            //$data['password'] = $user['password'];
+            $data['password'] = $user['password'];
 
             $user->update($data);
 
+            //dd($user['password'], $data['password']);
+
             if ( ! $data['password'] == '') // verifica se a senha foi alterada
             {
-                $user->password = bcrypt($data['password']); // muda a senha do seu usuario já criptografada pela função bcrypt
+                if(Hash::check($oldsenha, $user['password'])) {
+                    $user->password = bcrypt($data['newPass']); // muda a senha do seu usuario já criptografada pela função bcrypt
+                } else {
+                    return redirect()->back()->with('mensagem', 'Senha Atual inválida');
+                }
             }
 
-            $user->save($data);
+           $user->save($data);
+
+            //dd($user['password'], $data['password'], 'Esse');
 
             if ($user) {
 

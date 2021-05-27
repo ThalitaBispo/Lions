@@ -3,9 +3,8 @@ function limpa_formulário() {
 	document.getElementById('confirmPassowrd').value=("");
 }
 
-
 function validaPass(){
-    var pass = document.getElementById('password').value;
+    var pass = document.getElementById('newPass').value;
     var confPass = document.getElementById('confirmPassowrd').value;
 
     if(pass !== confPass){
