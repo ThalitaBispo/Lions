@@ -26,7 +26,7 @@ class UserController extends Controller
     public function create(Request $req)
     {
 
-        //if (Auth::check() === true) {
+        if (Auth::check() === true) {
             $dados = $req->all();
 
             if($dados['administrator'] == 'Sim'){
@@ -49,7 +49,7 @@ class UserController extends Controller
                 'create' => true,
             ]);
 
-        //}
+        }
 
         //return redirect()->route('home');
 
@@ -77,7 +77,7 @@ class UserController extends Controller
 
             $data = $request->all();
 
-            if($data['administrator'] == 'Sim'){
+            if($data['administrator'] == 'Sim' || $data['administrator'] == 1){
                 $data['administrator'] = 1;
             } else {
                 $data['administrator'] = 0;
@@ -89,8 +89,6 @@ class UserController extends Controller
 
             $user->update($data);
 
-            //dd($user['password'], $data['password']);
-
             if ( ! $data['password'] == '') // verifica se a senha foi alterada
             {
                 if(Hash::check($oldsenha, $user['password'])) {
@@ -101,8 +99,6 @@ class UserController extends Controller
             }
 
            $user->save($data);
-
-            //dd($user['password'], $data['password'], 'Esse');
 
             if ($user) {
 

@@ -155,6 +155,11 @@
                         <input type="text" name="street" class="form-control" id="rua" placeholder="Logradouro" required>
                         </div>
 
+                        <div class="form-group mt-2">
+                        <label>Complemento</label>
+                        <input type="text" name="complement" class="form-control" placeholder="Complemento">
+                        </div>
+
                         <div class="form-group row">
                         <div class="col">
                         <label>N°</label>
@@ -163,7 +168,7 @@
 
                         <div class="col">
                         <label>Qd.</label>
-                        <input type="number" name="court" class="form-control" placeholder="00000" required>
+                        <input type="number" name="court" class="form-control" placeholder="00000">
                         </div>
 
                         <div class="col">

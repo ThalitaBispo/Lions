@@ -23,11 +23,12 @@ class CreateClientesTable extends Migration
             $table->string('tel');
             $table->string('cep');
             $table->string('street');
+            $table->integer('complement')->nullable();
             $table->string('district');
             $table->string('city');
             $table->string('state');
             $table->integer('number');
-            $table->integer('court');
+            $table->integer('court')->nullable();
             $table->integer('lot')->nullable();
             $table->date('date');
             $table->string('day');

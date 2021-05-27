@@ -12,7 +12,7 @@ class Cliente extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'name', 'email', 'cpf_cnpj', 'sector', 'type', 'tel', 'cep', 'street', 'district', 'city', 'state',
+        'name', 'email', 'cpf_cnpj', 'sector', 'type', 'tel', 'cep', 'street', 'complement', 'district', 'city', 'state',
         'number', 'court', 'lot', 'date', 'day', 'newdate', 'value', 'seller', 'users_id',
     ];
 }

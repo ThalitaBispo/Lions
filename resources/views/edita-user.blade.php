@@ -125,7 +125,11 @@
                             <div class="form-group">
                                 <label>Administrador</label>
                                     <select name="administrator" class="form-control">
-                                        <option></option>
+                                        @if($registro->administrator == 1)
+                                            <option value="{{$registro->administrator}}">Sim</option>
+                                        @else
+                                            <option value="{{$registro->administrator}}">Não</option>
+                                        @endif
                                         <option value="Sim">Sim</option>
                                         <option value="Não">Não</option>
                                     </select>
