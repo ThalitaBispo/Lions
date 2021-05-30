@@ -5,7 +5,7 @@ function limpa_formulário_cep() {
 	document.getElementById('bairro').value=("");
 	document.getElementById('cidade').value=("");
 	document.getElementById('uf').value=("");
-	
+
 }
 
 function meu_callback(conteudo) {
@@ -15,7 +15,16 @@ if (!("erro" in conteudo)) {
 	document.getElementById('bairro').value=(conteudo.bairro);
 	document.getElementById('cidade').value=(conteudo.localidade);
 	document.getElementById('uf').value=(conteudo.uf);
-	
+
+    //Torna os campos readOnly
+	document.getElementById('rua').readOnly = true;
+    document.getElementById('bairro').readOnly = true;
+	document.getElementById('cidade').readOnly = true;
+	// document.getElementById('uf').setAttribute("readonly", true);
+    var teste = document.getElementById('teste');
+    teste.innerHTML = "<label>UF *</label>" +
+    "<input type='text' name='state' value=' "  + conteudo.uf + " ' class='form-control' id='uf' readOnly required />"
+
 } //end if.
 else {
 	//CEP não Encontrado.
@@ -49,7 +58,7 @@ if (cep != "") {
 		document.getElementById('bairro').value="...";
 		document.getElementById('cidade').value="...";
 		document.getElementById('uf').value="...";
-		
+
 
 		//Cria um elemento javascript.
 		var script = document.createElement('script');

@@ -23,6 +23,7 @@
         <script type="text/javascript" src="{{ asset('js/mask.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/validaCPFCNPJ.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/validaData.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/validacamposcep.js') }}"></script>
 
         <link rel="shortcut icon" href="{{ asset('img/leao-preto.png') }}" />
 
@@ -115,24 +116,24 @@
                     {{ csrf_field() }}
 
                         <div class="form-group">
-                        <label>Nome</label>
+                        <label>Nome *</label>
                         <input type="text" name="name" class="form-control" placeholder="Razão Social" required>
                         </div>
 
                         <div class="form-group">
-                        <label>Email</label>
+                        <label>Email *</label>
                         <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
 
                         <div class="form-group">
-                        <label>CPF/CNPJ</label>
+                        <label>CPF/CNPJ *</label>
                         <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" minlength="11" maxlength="18" placeholder="000.000.000-00 ou 00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
                         </div>
 
                         <p id="validar"></p>
 
                         <div class="form-group">
-                        <label>Telefone</label>
+                        <label>Telefone *</label>
                         <input type="text" name="tel" class="form-control" minlength="11" maxlength="15" placeholder="(00) 00000-0000" onkeypress="mascara(this, telefone)" required>
                         </div>
 
@@ -142,7 +143,7 @@
                         </div>
 
                         <div class="form-group">
-                        <label>CEP</label>
+                        <label>CEP *</label>
                         <input type="text" name="cep" class="form-control" id="cep" maxlength="10" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
                         <br>
                             <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
@@ -151,7 +152,7 @@
                         <p id="mostrar"></p>
 
                         <div class="form-group mt-2">
-                        <label>Logradouro</label>
+                        <label>Logradouro *</label>
                         <input type="text" name="street" class="form-control" id="rua" placeholder="Logradouro" required>
                         </div>
 
@@ -162,7 +163,7 @@
 
                         <div class="form-group row">
                         <div class="col">
-                        <label>N°</label>
+                        <label>N° *</label>
                         <input type="number" name="number" class="form-control" placeholder="00000" required>
                         </div>
 
@@ -178,36 +179,67 @@
                         </div>
 
                         <div class="form-group">
-                        <label>Bairro</label>
+                        <label>Bairro *</label>
                         <input type="text" name="district" class="form-control" id="bairro" placeholder="Bairro" required>
                         </div>
 
-                        <div class="form-group">
-                        <label>Cidade</label>
-                        <input type="text" name="city" class="form-control" id="cidade" placeholder="Cidade"required >
-                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <label>Cidade *</label>
+                            <input type="text" name="city" class="form-control" id="cidade" placeholder="Cidade" required >
+                            </div>
 
-                        <div class="form-group">
-                        <label>Estado</label>
-                        <input type="text" name="state" class="form-control" id="uf" placeholder="Estado" required>
+                            <div class="col" id="teste">
+                                <label>UF *</label>
+                                <select name="state" class="form-control" id="uf" required>
+                                <option value=""></option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="form-group row">
-                        <div class="col">
-                        <label>Próxima data para pagamento</label>
-                        <input type="text" id="data" name="date" class="form-control" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
-                        </div>
+                            <div class="col">
+                                <label>Próxima data para pagamento *</label>
+                            <input type="text" id="data" name="date" class="form-control" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
+                            </div>
 
-                        <div class="col">
-                        <label>Valor</label>
-                        <input type="text" name="value" class="form-control" placeholder="R$ 00,00" onkeypress="mascara(this, numberToReal)" required>
-                        </div>
+                            <div class="col">
+                                <label>Valor *</label>
+                            <input type="text" name="value" class="form-control" placeholder="R$ 00,00" onkeypress="mascara(this, numberToReal)" required>
+                            </div>
                         </div>
 
                         <p id="validaData"></p>
 
                         <div class="form-group">
-                        <label>Vendedor</label>
+                        <label>Vendedor *</label>
                         <input type="text" name="seller" class="form-control" placeholder="Vendedor" required>
                     </div>
 

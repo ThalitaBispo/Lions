@@ -17,6 +17,7 @@ body {
     width: 260px;
     height: 100%;
     color: #e1ffff;
+    overflow-x: hidden; /* tirar barra de rolagem */
 }
 
 .nav-side-menu .brand {
