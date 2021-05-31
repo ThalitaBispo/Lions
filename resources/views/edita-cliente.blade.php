@@ -188,8 +188,8 @@
                     <input type="text" name="city" class="form-control" value="{{$clientes->city}}" id="cidade" placeholder="Cidade" readonly required>
                   </div>
 
-                  <div class="col">
-                    <label>Estado *</label>
+                  <div class="col" id="teste">
+                    <label>UF *</label>
                     <input type="text" name="state" class="form-control" value="{{$clientes->state}}" id="uf" placeholder="Estado" readonly required>
                   </div>
                 </div>
