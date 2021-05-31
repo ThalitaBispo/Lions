@@ -116,7 +116,7 @@
                     {{ csrf_field() }}
 
                         <div class="form-group">
-                        <label>Nome *</label>
+                        <label>Nome/Razão Social *</label>
                         <input type="text" name="name" class="form-control" placeholder="Razão Social" required>
                         </div>
 

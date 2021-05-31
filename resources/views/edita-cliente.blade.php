@@ -115,24 +115,24 @@
                 {{ csrf_field() }}
 
                   <div class="form-group">
-                    <label>Nome/Razão Social</label>
+                    <label>Nome/Razão Social *</label>
                     <input type="text" name="name" class="form-control" placeholder="Nome/Razão Social" value="{{$clientes->name}}" required>
                   </div>
 
                   <div class="form-group">
-                    <label>Email</label>
+                    <label>Email *</label>
                     <input type="email" name="email" class="form-control" placeholder="Email" value="{{$clientes->email}}" required>
                   </div>
 
                   <div class="form-group">
-                    <label>CPF/CNPJ</label>
+                    <label>CPF/CNPJ *</label>
                     <input type="text" id="cpfCNPJ" name="cpf/cnpj" class="form-control" value="{{ $clientes->cpf_cnpj }}" minlength="11" maxlength="18" placeholder="00.000.000/0000-00" onkeypress="mascara(this, cpf)" onblur="validaCpfCnpj(cpfCNPJ.value);" required>
                   </div>
 
                   <p id="validar"></p>
 
                   <div class="form-group">
-                    <label>Telefone</label>
+                    <label>Telefone *</label>
                     <input type="text" name="tel" class="form-control" value="{{$clientes->tel}}" minlength="11" maxlength="15" placeholder="(00) 00000-0000" onkeypress="mascara(this, telefone)" required>
                   </div>
 
@@ -142,7 +142,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label>CEP</label>
+                    <label>CEP *</label>
                     <input type="text" name="cep" class="form-control"  maxlength="10" value="{{$clientes->cep}}" id="cep" placeholder="00000-000" onkeyup='return event.charCode >= 48 && event.charCode <= 57' onkeypress="mascara(this, maskCep)" required>
                     <br>
                     <input type="button" value="Buscar" class="btn btn-dark" onclick="pesquisacep(cep.value);">
@@ -151,9 +151,14 @@
                   <p id="mostrar"></p>
 
                   <div class="form-group mt-2">
-                    <label>Logradouro</label>
-                    <input type="text" name="street" class="form-control" value="{{$clientes->street}}" id="rua" placeholder="Logradouro" required>
+                    <label>Logradouro *</label>
+                    <input type="text" name="street" class="form-control" value="{{$clientes->street}}" id="rua" placeholder="Logradouro" readonly required>
                   </div>
+
+                    <div class="form-group mt-2">
+                        <label>Complemento</label>
+                        <input type="text" name="complement" class="form-control" placeholder="Complemento">
+                    </div>
 
                   <div class="form-group row">
                     <div class="col">
@@ -163,7 +168,7 @@
 
                     <div class="col">
                       <label>Qd.</label>
-                      <input type="number" name="court" class="form-control" value="{{$clientes->court}}" placeholder="00000" required>
+                      <input type="number" name="court" class="form-control" value="{{$clientes->court}}" placeholder="00000">
                     </div>
 
                     <div class="col">
@@ -173,28 +178,30 @@
                   </div>
 
                   <div class="form-group">
-                    <label>Bairro</label>
-                    <input type="text" name="district" class="form-control" value="{{$clientes->district}}" id="bairro" placeholder="Bairro" required>
+                    <label>Bairro *</label>
+                    <input type="text" name="district" class="form-control" value="{{$clientes->district}}" id="bairro" placeholder="Bairro" readonly required>
                   </div>
 
-                  <div class="form-group">
-                    <label>Cidade</label>
-                    <input type="text" name="city" class="form-control" value="{{$clientes->city}}" id="cidade" placeholder="Cidade" required>
+                <div class="form-group row">
+                  <div class="col">
+                    <label>Cidade *</label>
+                    <input type="text" name="city" class="form-control" value="{{$clientes->city}}" id="cidade" placeholder="Cidade" readonly required>
                   </div>
 
-                  <div class="form-group">
-                    <label>Estado</label>
-                    <input type="text" name="state" class="form-control" value="{{$clientes->state}}" id="uf" placeholder="Estado" required>
+                  <div class="col">
+                    <label>Estado *</label>
+                    <input type="text" name="state" class="form-control" value="{{$clientes->state}}" id="uf" placeholder="Estado" readonly required>
                   </div>
+                </div>
 
                   <div class="form-group row">
                     <div class="col">
-                      <label>Próxima data para pagamento</label>
+                      <label>Próxima data para pagamento *</label>
                       <input type="text" id="data" name="date" class="form-control" value="{{ \Carbon\Carbon::parse($clientes->date)->format('d/m/Y') }}" maxlength="10" placeholder="00/00/0000" onkeypress="mascara(this, mdata)" onblur="validaData(data.value)" required>
                     </div>
 
                     <div class="col">
-                      <label>Valor</label>
+                      <label>Valor *</label>
                       <input type="text" name="value" class="form-control" value="{{$clientes->value}}" placeholder="R$ 00,00" onkeypress="mascara(this, numberToReal)" required>
                     </div>
                   </div>

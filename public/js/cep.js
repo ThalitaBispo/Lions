@@ -20,7 +20,6 @@ if (!("erro" in conteudo)) {
 	document.getElementById('rua').readOnly = true;
     document.getElementById('bairro').readOnly = true;
 	document.getElementById('cidade').readOnly = true;
-	// document.getElementById('uf').setAttribute("readonly", true);
     var teste = document.getElementById('teste');
     teste.innerHTML = "<label>UF *</label>" +
     "<input type='text' name='state' value=' "  + conteudo.uf + " ' class='form-control' id='uf' readOnly required />"
