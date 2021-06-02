@@ -34,7 +34,7 @@ class MailPropos extends Mailable
         $id = $this->id;
         $cliente = Cliente::where('id', $id)->get();
         $pdf = PDF::loadView('proposta-pdf', compact('cliente'));
-        return $this->subject('Teste envio de email')
+        return $this->subject('Proposta de serviço - Grupo Lions')
             ->view('email.TestMail')
             ->attachData($pdf->output(), "propostadeservico.pdf");
     }

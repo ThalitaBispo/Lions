@@ -114,43 +114,43 @@
 
                                     <div class="form-group">
                                         <label>Nome</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Nome">
+                                        <input type="text" name="name" class="form-control" placeholder="Nome" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Lions@lions.com">
+                                        <input type="email" name="email" class="form-control" placeholder="Lions@lions.com" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Administrador</label>
-                                            <select name="administrator" class="form-control">
+                                            <select name="administrator" class="form-control" required>
                                                 <option></option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
                                     </div>
 
-                                    <p id="validaPass"></p>
-
                                     <div class="form-group">
                                         <label>Senha</label>
-                                        <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" placeholder="***********">
-                                        <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
+                                        <input type="password" id="newPass" name="password" class="form-control" minlength="6" maxlength="8" placeholder="***********" required>
+                                        <span class="material-icons" onclick="mostrarsenhaNova();" style="position: absolute;margin-top:-30px;
                                         right: 60px;cursor: pointer;">remove_red_eye</span>
                                     </div>
+
+                                    <p id="validaPass"></p>
 
 
                                     <div class="form-group">
                                         <label>Confirmar Senha</label>
-                                        <input type="password" onblur="validaPass();" id="confirmPassowrd" name="confirmPassowrd" class="form-control" minlength="6" maxlength="8" placeholder="***********">
+                                        <input type="password" id="confirmPassowrd" name="confirmPassowrd" class="form-control" minlength="6" maxlength="8" placeholder="***********" required>
                                         <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
                                             right: 60px;cursor: pointer;">remove_red_eye</span>
                                     </div>
 
                                     <p id="validarP"></p>
 
-                                    <button type="submit" class="btn btn-dark mt-4">Salvar</button>
+                                    <button type="submit"onclick="validaPass()"  class="btn btn-dark mt-4">Salvar</button>
 
 
                                 </form>

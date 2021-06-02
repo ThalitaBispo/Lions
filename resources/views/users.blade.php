@@ -104,8 +104,10 @@
 
                 <div class="row" style="float: right">
                     <div class="col">
+                        @can('notADM')
                         <a href="{{route('dashboard/create/user')}}" class="btn btn-success" type="button">Cadastrar</a></buton>
                         <a href="{{route('user/relation')}}" target="_blank" class="btn btn-primary" type="button">Relatório</a>
+                        @endcan
                     </div>
 
                 </div>
@@ -145,11 +147,13 @@
 
                                     <a href="{{ route('user/find', ['id' => $registro->id]) }}" class="btn btn-primary btn-sm mb-1">Visualizar</a>
 
+                                    @can('notADM', $registro)
                                     <a href="{{ route('dashboard/update/user', ['id' => $registro->id]) }}" class="btn btn-warning btn-sm mb-1">Editar</a>
+                                    @endcan
 
                                     @if($registro->id !== Auth::user()->id)
 
-                                    @can('notDeletADM', $registro)
+                                    @can('notADM', $registro)
                                     <a href="{{ route('user/delete', ['id' => $registro->id]) }}" class="btn btn-danger btn-sm mb-1"onClick="return confirm('Deseja mesmo apagar o usuario selecionado?')">Excluir</a>
                                     @endcan
 

@@ -18,11 +18,11 @@ if (!("erro" in conteudo)) {
 
     //Torna os campos readOnly
 	document.getElementById('rua').readOnly = true;
-    document.getElementById('bairro').readOnly = true;
+  document.getElementById('bairro').readOnly = true;
 	document.getElementById('cidade').readOnly = true;
-    var teste = document.getElementById('teste');
-    teste.innerHTML = "<label>UF *</label>" +
-    "<input type='text' name='state' value=' "  + conteudo.uf + " ' class='form-control' id='uf' readOnly required />"
+  var teste = document.getElementById('teste');
+  teste.innerHTML = "<label>UF *</label>" +
+  "<input type='text' name='state' value=' "  + conteudo.uf + " ' class='form-control' id='uf' readOnly required />"
 
 } //end if.
 else {

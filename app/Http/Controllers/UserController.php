@@ -6,16 +6,15 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Mockery\Undefined;
+use Symfony\Component\ErrorHandler\Error\UndefinedMethodError;
 
 class UserController extends Controller
 {
 
     public function index()
     {
-
         if (Auth::check() === true) {
-            $registros = User::all();
-
             $registros = User::all();
             return view('users', compact('registros'));
         }
@@ -59,10 +58,6 @@ class UserController extends Controller
     {
         if (Auth::check() === true) {
             $registro = User::findOrFail($id);
-
-            if(!$this->authorize('notDeletADM', $registro)) {
-                return response([], 403);
-            }
 
             return view('user-view', compact('registro'));
         }

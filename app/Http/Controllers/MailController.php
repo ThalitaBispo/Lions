@@ -17,14 +17,14 @@ class MailController extends Controller
 
         $cliente = Cliente::findOrFail($id);
         FacadesMail::to($cliente['email'])->send(new Mail($id));
-        return 'Email send';
+        return redirect()->route('dashboard')->with('mensagem', 'Email enviado com sucesso!');
     }
 
     public function sendEmailPropos($id)
     {
         $cliente = Cliente::findOrFail($id);
         FacadesMailP::to($cliente['email'])->send(new MailPropos($id));
-        return 'Email send';
+        return redirect()->route('dashboard')->with('mensagem', 'Email enviado com sucesso!');
     }
 
     public function forgotPassword(Request $req) {

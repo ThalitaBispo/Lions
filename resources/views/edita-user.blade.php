@@ -108,6 +108,7 @@
                                 <h4 class="mt-5">Editar Usuário</h4>
                                 <hr>
 
+
                         <form class="mt-4 mb-5" method="POST" action="{{ route ('user/update', ['id' => $registro->id]) }}">
 
                         {{ csrf_field() }}
@@ -143,14 +144,14 @@
 
                             <div class="form-group">
                             <label>Senha Atual</label>
-                                <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
+                                <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
 
                             <div class="form-group">
                             <label>Nova Senha</label>
-                                <input type="password" id="newPass" name="newPass" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********" required>
+                                <input type="password" id="newPass" name="newPass" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenhaNova();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
@@ -159,7 +160,7 @@
 
                             <div class="form-group">
                             <label >Confirmar Senha:</label>
-                                <input type="password" id="confirmPassowrd" name="confirmPassowrd" minlength="6" maxlength="8" class="form-control" id="recipient-name" placeholder="***********" required>
+                                <input type="password" id="confirmPassowrd" name="confirmPassowrd" minlength="6" maxlength="8" class="form-control" id="recipient-name" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenhaConf();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>

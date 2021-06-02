@@ -41,11 +41,6 @@ class PDFController extends Controller
 
     public function cashier(){
         $cashier = Cliente::all();
-
-        if(!$this->authorize('PDFCashier', $cashier)) {
-            return response([], 403);
-        }
-
         $total = DB::table('clientes')->select('value')->where('deleted_at', null)->get();
         $total_value = $total->sum('value');
         $pdf = PDF::loadView('cashier-pdf', compact('cashier', 'total_value'));
@@ -63,7 +58,7 @@ class PDFController extends Controller
         }
 
         $pdf = PDF::loadView('client-pdf', compact('clients'));
-        return redirect('https://api.whatsapp.com/send?text=Link do recibo: http://127.0.0.1:8000/download');
-        //return $pdf->download('clientes.pdf');
+        return redirect('https://api.whatsapp.com/send?text=Link do recibo:http://127.0.0.1:8000/download');
+        //return //return redirect('https://api.whatsapp.com/send?text=Link do recibo: http://lionsmonitoramento/download' . $id);
     }
 }

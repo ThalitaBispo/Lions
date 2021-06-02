@@ -2,6 +2,10 @@
 
 namespace App\Policies;
 
+use Illuminate\Support\Facades\Gate;
+
+use Illuminate\Support\Facades\Auth;
+
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -20,25 +24,9 @@ class AccessPolicy
         //
     }
 
-    public function before(User $user)
-    {
-         if($user->administrator == 1) {
-              return true;
-         }
-    }
-
-    public function delet(User $user)
+    public function notADM(User $user)
     {
         return $user->administrator == 1;
     }
 
-    public function notDeletADM(User $user)
-    {
-        return $user->administrator == 1;
-    }
-
-    public function PDFCashier(User $user)
-    {
-        return $user->administrator == 1;
-    }
 }
