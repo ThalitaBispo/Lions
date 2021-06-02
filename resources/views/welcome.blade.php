@@ -46,7 +46,7 @@
         <span class="material-icons" onclick="mostrarsenha();" style="position: relative;top: -50px;
         left: 140px;cursor: pointer;">remove_red_eye</span>
 
-        <a href="{{ route('forgot') }}" style="color:black;text-decoration:none">Esqueci a senha</a>
+        <a href="{{ route('forgot') }}" style="color:black;text-decoration:none;">Esqueci a senha</a>
 
         <script>
         function mostrarsenha() {

@@ -23,6 +23,7 @@
 
         <script type="text/javascript" src="{{ asset('js/ShowPassword.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/validaPassword.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/validaCadastro.js') }}"></script>
 
 </head>
 <body>
@@ -144,14 +145,14 @@
 
                             <div class="form-group">
                             <label>Senha Atual</label>
-                                <input type="password" id="password" name="password" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********">
+                                <input type="password" id="password" name="password" onblur="validaC()" class="form-control" minlength="6" maxlength="8" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenha();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>
 
                             <div class="form-group">
                             <label>Nova Senha</label>
-                                <input type="password" id="newPass" name="newPass" class="form-control" minlength="6" maxlength="8" value="" placeholder="***********">
+                                <input type="password" id="newPass" name="newPass" class="form-control" minlength="6" maxlength="8" placeholder="***********">
                             <span class="material-icons" onclick="mostrarsenhaNova();" style="position: absolute;margin-top:-30px;
                             right: 60px;cursor: pointer;">remove_red_eye</span>
                             </div>

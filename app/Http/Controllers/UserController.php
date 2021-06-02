@@ -68,6 +68,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         if (Auth::check() === true) {
+
             $user = User::findOrFail($id);
 
             $data = $request->all();
@@ -80,23 +81,25 @@ class UserController extends Controller
 
             $oldsenha = $data['password'];
 
-            $data['password'] = $user['password'];
-
-            $user->update($data);
-
-            if ( ! $data['password'] == '') // verifica se a senha foi alterada
+            if ($data['password'] !== null) // verifica se a senha foi alterada
             {
                 if(Hash::check($oldsenha, $user['password'])) {
                     $user->password = bcrypt($data['newPass']); // muda a senha do seu usuario já criptografada pela função bcrypt
                 } else {
                     return redirect()->back()->with('mensagem', 'Senha Atual inválida');
                 }
+            } else {
+                $data['password'] = $user['password'];
+                $user->update($data);
             }
 
-           $user->save($data);
+            $data['password'] = $user['password'];
+
+            $user->update($data);
+
+            $user->save($data);
 
             if ($user) {
-
                 return redirect()->route('user')->with('success', 'Sucesso ao alterar usuário');
             }
 
