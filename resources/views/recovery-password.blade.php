@@ -54,11 +54,11 @@
 
         <input type="password" id="password" style="margin-bottom: -20px;" name="password" placeholder="Senha" required/>
 
-        <span class="material-icons" onclick="mostrarsenha();" style="position: relative;top:-20px;margin-left:280px;
+        <span class="material-icons" onclick="mostrarsenha();" style="position: relative;top:-20px;left:80px;
         right: 60px;cursor: pointer;">remove_red_eye</span>
 
         <input type="password" onblur="validaPass();" id="confirmPassowrd" style="margin-bottom: -20px;" name="confirmPassowrd" placeholder="Confirmar Senha" required/>
-        <span class="material-icons" onclick="mostrarsenhaConf();" style="position: relative;top: -20px;margin-left:280px;
+        <span class="material-icons" onclick="mostrarsenhaConf();" style="position: relative;top: -20px;left:80px;
         right: 60px;cursor: pointer;">remove_red_eye</span>
 
         <button class="btn btn-lg btn-success btn-block mt-2" type="submit">Enviar</button>

@@ -105,7 +105,9 @@
 
 						<form>
 							<div class="form-group row">
-								<label class="col-sm-9 col-form-label">Dashboard - {{ Auth::user()->name }}</label>
+                            <i class="material-icons mt-2 ml-3">person</i>
+                            <label class="col-sm-9 col-form-label">
+                                {{ Auth::user()->name }}</label>
 							</div>
 						</form>
 
@@ -119,7 +121,7 @@
                     <nav class="navbar navbar-light">
                        <form class="form-inline" method="POST" action="{{ route ('search') }}">
                        {{ csrf_field() }}
-                            <input class="form-control mr-sm-2" name="name" style="width:260px;" type="search" placeholder="Pesquisar Nome/Razão Social" aria-label="Pesquisar">
+                            <input class="form-control mr-sm-2" name="name" style="width:280px;" type="search" placeholder="Pesquisar Nome/Razão Social" aria-label="Pesquisar">
                             <button type="submit" class="btn btn-outline-dark my-2 my-sm-0">Pesquisar</button>
                         </form>
                     </nav>
@@ -142,7 +144,7 @@
                     <nav class="navbar navbar-light">
                         <form class="form-inline" method="POST" action="{{ route ('search') }}">
                         {{ csrf_field() }}
-                            <input class="form-control mr-sm-2" name="district" type="search" style="width:260px;" placeholder="Pesquisar Bairro" aria-label="Pesquisar">
+                            <input class="form-control mr-sm-2" name="district" type="search" style="width:280px;" placeholder="Pesquisar Bairro" aria-label="Pesquisar">
                             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Pesquisar</button>
                         </form>
                     </nav>
