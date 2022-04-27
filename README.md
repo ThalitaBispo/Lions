@@ -17,15 +17,3 @@ Executar o Projeto
 7- Com as migrations e as seeds inseridas no banco inicie o servidor da aplicação com o comando: "php artisan serve"
 
 8- Na tela de login as credenciais são: Email: "admin@gmail.com" && Senha:"12345678" ou "thalita@gmail.com" && Senha:"12345678"
-
-9 - Não se esqueça de pesquisar por middleware no Laravel para proteger todas as rotas de uma só vez
-
-10 - Quando for fazer a tela de perfil do usuário e precisar alterar a imagem dele e fazer upload. Tenho uma classe pronta pra isso naquele meu projeto que te enviei
-
-11 - Agora é só vc estilizar as páginas e fazer o include do meu lateral nas páginas igual eu fiz no outro projeto e continuar as migrations.
-
-12 - Qualquer dúvida estou a disposição. Bem vinda ao Laravel.
-
-
-
- 
